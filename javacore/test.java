@@ -1,18 +1,10 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.io.File;
 
 public class test {
 
 	public static void main(String[] args) {
-		int row = 5;
-		for (int i=1 ; i <= row; ++i) {
-			for(int j=i; j < row; ++j) {
-				System.out.print(" ");
-			}
-			for (int k=0; k < 2*i-1; ++k) {
-				System.out.print("*");
-			}
-			System.out.println("");
-		}
+		System.out.println(File.separator);
+		
+		System.out.println(System.getProperty("user.dir"));
 	}
 }
