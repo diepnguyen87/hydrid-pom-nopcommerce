@@ -1,6 +1,11 @@
 package com.nopcommerce.users;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -12,7 +17,7 @@ import pageObjects.RegisterPageObject;
 import pageObjects.UserCustomerInfoPO;
 import pageObjects.UserHomePO;
 
-public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
+public class Level_05_Register_Login_Page_Factory extends AbstractTest {
 
 	private WebDriver driver;
 	private String firstName, lastName, email, company, password, confirmPassword, day, month, year;
@@ -21,6 +26,10 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 	private LoginPageObject loginPage;
 	private RegisterPageObject registerPage;
 	private UserCustomerInfoPO customerInfoPage;
+
+	public static final String USERNAME = "diepnguyen5";
+	public static final String AUTOMATE_KEY = "sEsLPzEaEsksX3g1WqXs";
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 	@Parameters("browser")
 	@BeforeClass

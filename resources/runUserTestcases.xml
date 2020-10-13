@@ -46,6 +46,9 @@
 		<classes>
 			<class
 				name="com.nopcommerce.users.Level_04_Register_Login_Multiple_Browser" />
+			<class
+				name="com.nopcommerce.users.Level_05_Register_Login_Page_Factory" />
+					
 		</classes>
 	</test>
 
