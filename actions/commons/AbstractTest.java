@@ -10,6 +10,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AbstractTest {
 	
@@ -19,26 +22,35 @@ public class AbstractTest {
 	private String osName = System.getProperty("os.name");
 	
 	protected WebDriver getBrowserDriver(String browserName) {
-		setBrowserDriver();
-		if (browserName.equals("firefox_ui")) {
+		Browser browser = Browser.valueOf(browserName.toUpperCase());
+		
+		if (browser == Browser.FIREFOX_UI) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if (browserName.equals("chrome_ui")) {
+		} else if (browser == Browser.CHROME_UI) {
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.setExperimentalOption("useAutomationExtension", false);
 			chromeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 			driver = new ChromeDriver(chromeOptions);
-		} else if (browserName.equals("firefox_headless")) {
+		} else if (browser == Browser.FIREFOX_HEADLESS) {
+			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.setHeadless(true);
 			driver = new FirefoxDriver(options);
-		} else if (browserName.equals("chrome_headless")) {
+		} else if (browser == Browser.CHROME_HEADLESS) {
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("window-size=1920x1080");
 			driver = new ChromeDriver(options);
-		} else if (browserName.equals("edge_chromium")) {
+		} else if (browser == Browser.EDGE_CHROMIUM) {
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else {
+		}else if (browser == Browser.IE_UI) {
+			WebDriverManager.iedriver().arch32().setup();
+			driver = new InternetExplorerDriver();
+		}else {
 			throw new RuntimeException("Please input valid browser name value!");
 		}
 
