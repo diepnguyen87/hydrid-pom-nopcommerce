@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -17,7 +16,6 @@ public class Level_02_Register_Login_AbstractPage_2 extends AbstractPage {
 	private String webURL = "https://demo.nopcommerce.com/";
 	private String projectURL = System.getProperty("user.dir");
 	private String firstName, lastName, email, company, password, confirmPassword;
-	private Select select;
 	
 	@BeforeClass
 	public void beforeClass() {

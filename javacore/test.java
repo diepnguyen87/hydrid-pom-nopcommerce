@@ -1,20 +1,18 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 public class test {
 
 	public static void main(String[] args) {
-		String input = "toi la chinh toi";
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
-		
-		for(int i=0; i < input.length(); ++i) {
-			if(map.containsKey(input.charAt(i))) {
-				int temp = map.get(input.charAt(i));
-				map.put(input.charAt(i), ++temp);
-			}else {
-				map.put(input.charAt(i), 1);
+		int row = 5;
+		for (int i=1 ; i <= row; ++i) {
+			for(int j=i; j < row; ++j) {
+				System.out.print(" ");
 			}
+			for (int k=0; k < 2*i-1; ++k) {
+				System.out.print("*");
+			}
+			System.out.println("");
 		}
-		System.out.println(map);
 	}
 }

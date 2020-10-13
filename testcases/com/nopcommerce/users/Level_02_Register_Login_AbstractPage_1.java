@@ -4,11 +4,11 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import commons.AbstractPage;
 
 public class Level_02_Register_Login_AbstractPage_1 {
@@ -17,7 +17,6 @@ public class Level_02_Register_Login_AbstractPage_1 {
 	private String webURL = "https://demo.nopcommerce.com/";
 	private String projectURL = System.getProperty("user.dir");
 	private String firstName, lastName, email, company, password, confirmPassword;
-	private Select select;
 	private AbstractPage abstractPage;
 	
 	@BeforeClass
@@ -81,11 +80,9 @@ public class Level_02_Register_Login_AbstractPage_1 {
 		Assert.assertEquals(abstractPage.getElementAttribute(driver, "//input[@id='FirstName']", "value"), firstName);
 		Assert.assertEquals(abstractPage.getElementAttribute(driver, "//input[@id='LastName']", "value"), lastName);
 	
-	
 		Assert.assertEquals(abstractPage.getFirstSelectedTextInDropdown(driver, "//select[@name='DateOfBirthDay']"), "18");
 		Assert.assertEquals(abstractPage.getFirstSelectedTextInDropdown(driver, "//select[@name='DateOfBirthMonth']"), "August");
 		Assert.assertEquals(abstractPage.getFirstSelectedTextInDropdown(driver, "//select[@name='DateOfBirthYear']"), "1958");
-	
 	
 		Assert.assertEquals(abstractPage.getElementAttribute(driver, "//input[@id='Email']", "value"), email);
 		Assert.assertEquals(abstractPage.getElementAttribute(driver, "//input[@id='Company']", "value"), company);
