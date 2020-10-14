@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 import commons.AbstractPage;
 import pageObjects.UserCustomerInfoPO;
 import pageObjects.UserHomePO;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.UserLoginPO;
+import pageObjects.UserRegisterPO;
 
 public class Level_09_Web_Data_Table extends AbstractPage {
 
@@ -23,8 +23,8 @@ public class Level_09_Web_Data_Table extends AbstractPage {
 	private String firstName, lastName, email, company, password, confirmPassword, day, month, year;
 	
 	private UserHomePO homePage;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
+	private UserLoginPO loginPage;
+	private UserRegisterPO registerPage;
 	private UserCustomerInfoPO customerInfoPage;
 	
 	@BeforeClass
@@ -51,7 +51,7 @@ public class Level_09_Web_Data_Table extends AbstractPage {
 		homePage = new UserHomePO(driver);
 		homePage.clickToRegisterLink();
 		
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPO(driver);
 		
 		registerPage.clickToGenderMaleRadioButton();
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -77,7 +77,7 @@ public class Level_09_Web_Data_Table extends AbstractPage {
 	public void TC_02_Login() {
 		homePage.clickToLoginLink();
 		
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPO(driver);
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
 		loginPage.clickToLoginButton();

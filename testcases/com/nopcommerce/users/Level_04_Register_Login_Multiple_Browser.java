@@ -7,8 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.AbstractTest;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.UserLoginPO;
+import pageObjects.UserRegisterPO;
 import pageObjects.UserCustomerInfoPO;
 import pageObjects.UserHomePO;
 
@@ -18,8 +18,8 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 	private String firstName, lastName, email, company, password, confirmPassword, day, month, year;
 
 	private UserHomePO homePage;
-	private LoginPageObject loginPage;
-	private RegisterPageObject registerPage;
+	private UserLoginPO loginPage;
+	private UserRegisterPO registerPage;
 	private UserCustomerInfoPO customerInfoPage;
 
 	@Parameters("browser")
@@ -44,7 +44,7 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 		homePage = new UserHomePO(driver);
 		homePage.clickToRegisterLink();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new UserRegisterPO(driver);
 
 		registerPage.clickToGenderMaleRadioButton();
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -70,7 +70,7 @@ public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 	public void TC_02_Login() {
 		homePage.clickToLoginLink();
 
-		loginPage = new LoginPageObject(driver);
+		loginPage = new UserLoginPO(driver);
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
 		loginPage.clickToLoginButton();

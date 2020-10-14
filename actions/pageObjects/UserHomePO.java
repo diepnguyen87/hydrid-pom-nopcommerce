@@ -12,14 +12,16 @@ public class UserHomePO extends AbstractPage{
 		this.driver = driver;
 	}
 
-	public void clickToRegisterLink() {
+	public UserRegisterPO clickToRegisterLink() {
 		waitToElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
+		return PageGeneratorManager.getUserRegisterPage(driver);
 	}
 
-	public void clickToLoginLink() {
+	public UserLoginPO clickToLoginLink() {
 		waitToElementClickable(driver, HomePageUI.LOGIN_LINK);
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
+		return PageGeneratorManager.getUserLoginPage(driver);
 	}
 
 	public boolean isMyAccountLinkDisplayed() {
@@ -32,9 +34,10 @@ public class UserHomePO extends AbstractPage{
 		return isElementDisplay(driver, HomePageUI.LOGOUT_LINK);
 	}
 
-	public void clickToMyAccountLink() {
+	public UserCustomerInfoPO clickToMyAccountLink() {
 		waitToElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+		return PageGeneratorManager.getUserCustomerInfoPage(driver);
 	}
 
 }

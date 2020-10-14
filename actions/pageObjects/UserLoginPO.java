@@ -4,11 +4,11 @@ import org.openqa.selenium.WebDriver;
 import commons.AbstractPage;
 import pageUIs.LoginPageUI;
 
-public class LoginPageObject extends AbstractPage{
+public class UserLoginPO extends AbstractPage{
 
 	private WebDriver driver;
 	
-	public LoginPageObject(WebDriver driver) {
+	public UserLoginPO(WebDriver driver) {
 		this.driver = driver;
 	}
 	
@@ -22,9 +22,10 @@ public class LoginPageObject extends AbstractPage{
 		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
 	}
 
-	public void clickToLoginButton() {
+	public UserHomePO clickToLoginButton() {
 		waitToElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
 		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+		return new UserHomePO(driver);
 	}
 
 }

@@ -1,11 +1,6 @@
 package com.nopcommerce.users;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,10 +9,11 @@ import org.testng.annotations.Test;
 import commons.AbstractTest;
 import pageObjects.UserLoginPO;
 import pageObjects.UserRegisterPO;
+import pageObjects.PageGeneratorManager;
 import pageObjects.UserCustomerInfoPO;
 import pageObjects.UserHomePO;
 
-public class Level_05_Register_Login_Page_Factory extends AbstractTest {
+public class Level_06_Register_Login_Page_Generator_Manager extends AbstractTest {
 
 	private WebDriver driver;
 	private String firstName, lastName, email, company, password, confirmPassword, day, month, year;
@@ -26,10 +22,6 @@ public class Level_05_Register_Login_Page_Factory extends AbstractTest {
 	private UserLoginPO loginPage;
 	private UserRegisterPO registerPage;
 	private UserCustomerInfoPO customerInfoPage;
-
-	public static final String USERNAME = "diepnguyen5";
-	public static final String AUTOMATE_KEY = "sEsLPzEaEsksX3g1WqXs";
-	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 	@Parameters("browser")
 	@BeforeClass
@@ -50,10 +42,8 @@ public class Level_05_Register_Login_Page_Factory extends AbstractTest {
 
 	@Test
 	public void TC_01_Register() {
-		homePage = new UserHomePO(driver);
-		homePage.clickToRegisterLink();
-
-		registerPage = new UserRegisterPO(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
+		registerPage = homePage.clickToRegisterLink();
 
 		registerPage.clickToGenderMaleRadioButton();
 		registerPage.inputToFirstNameTextbox(firstName);
@@ -71,29 +61,25 @@ public class Level_05_Register_Login_Page_Factory extends AbstractTest {
 		registerPage.clickToRegisterButton();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
-		registerPage.clickToLogoutLink();
-		homePage = new UserHomePO(driver);
+		homePage = registerPage.clickToLogoutLink();
 	}
 
 	@Test
 	public void TC_02_Login() {
-		homePage.clickToLoginLink();
+		loginPage = homePage.clickToLoginLink();
 
-		loginPage = new UserLoginPO(driver);
 		loginPage.inputToEmailTextbox(email);
 		loginPage.inputToPasswordTextbox(password);
-		loginPage.clickToLoginButton();
+		homePage = loginPage.clickToLoginButton();
 
-		homePage = new UserHomePO(driver);
 		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
 		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
 	}
 
 	@Test
 	public void TC_03_View_My_Account() {
-		homePage.clickToMyAccountLink();
+		customerInfoPage = homePage.clickToMyAccountLink();
 
-		customerInfoPage = new UserCustomerInfoPO(driver);
 		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
 
 		Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(), firstName);
