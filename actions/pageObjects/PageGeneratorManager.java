@@ -20,5 +20,16 @@ public class PageGeneratorManager {
 		return new UserCustomerInfoPO(driver);
 	}
 	
+	public static UserCustomerAddressesPO getUserCustomerAddressesPage(WebDriver driver) {
+		return new UserCustomerAddressesPO(driver);
+	}
+	
+	public static UserOrdersHistoryPO getUserOrdersHistoryPage(WebDriver driver) {
+		return new UserOrdersHistoryPO(driver);
+	}
+	
+	public static UserCustomerProductReviewsPO getUserCustomerProductReviewsPage(WebDriver driver) {
+		return new UserCustomerProductReviewsPO(driver);
+	}
 	
 }

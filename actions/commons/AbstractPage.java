@@ -13,6 +13,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.PageGeneratorManager;
+import pageObjects.UserCustomerAddressesPO;
+import pageObjects.UserCustomerInfoPO;
+import pageObjects.UserCustomerProductReviewsPO;
+import pageObjects.UserOrdersHistoryPO;
+import pageUIs.AbstractPageUI;
+import pageUIs.AddressesPageUI;
+import pageUIs.CustomerInfoPageUI;
+import pageUIs.MyProductReviewsPageUI;
+
 public class AbstractPage {
 
 	private WebDriverWait explicitWait;
@@ -347,4 +357,29 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
 	}
+	
+	public UserCustomerAddressesPO openAddressesPage(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.ADDRESSES_LINK);
+		clickToElement(driver, AbstractPageUI.ADDRESSES_LINK);
+		return PageGeneratorManager.getUserCustomerAddressesPage(driver);
+	}
+	
+	public UserCustomerProductReviewsPO openMyProductReviewsPage(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.MY_PRODUCT_REVIEWS_LINK);
+		clickToElement(driver, AbstractPageUI.MY_PRODUCT_REVIEWS_LINK);
+		return PageGeneratorManager.getUserCustomerProductReviewsPage(driver);
+	}
+
+	public UserCustomerInfoPO openCustomerInfoPage(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.CUSTOMER_INFO_LINK);
+		clickToElement(driver, AbstractPageUI.CUSTOMER_INFO_LINK);
+		return PageGeneratorManager.getUserCustomerInfoPage(driver);
+	}
+	
+	public UserOrdersHistoryPO openOrderPage(WebDriver driver) {
+		waitToElementClickable(driver, AbstractPageUI.ORDERS_HISTORY_LINK);
+		clickToElement(driver, AbstractPageUI.ORDERS_HISTORY_LINK);
+		return PageGeneratorManager.getUserOrdersHistoryPage(driver);
+	}
+
 }

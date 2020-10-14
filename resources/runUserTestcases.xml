@@ -45,7 +45,7 @@
 		<parameter name="browser" value="edge_chromium"></parameter>
 		<classes>
 			<class
-				name="com.nopcommerce.users.Level_06_Register_Login_Page_Generator_Manager" />
+				name="com.nopcommerce.users.Level_07_Register_Login_Switch_Page_Type" />
 					
 		</classes>
 	</test>
