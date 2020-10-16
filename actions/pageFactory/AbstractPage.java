@@ -2,7 +2,6 @@ package pageFactory;
 
 import java.util.List;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import commons.GlobalConstants;
 
 public class AbstractPage {
 
@@ -19,8 +19,6 @@ public class AbstractPage {
 	private JavascriptExecutor jsExecutor;
 	private Actions action;
 	private Select select;
-	private long shortTimeOut = 5;
-	private long longTimeout = 30;
 
 	public void openPageUrl(WebDriver driver, String url) {
 		driver.get(url);
@@ -67,7 +65,7 @@ public class AbstractPage {
 	}
 
 	public void waitAlertPresence(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.alertIsPresent());
 	}
 
@@ -145,7 +143,7 @@ public class AbstractPage {
 
 		sleepInSecond(1);
 
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 
 		for (WebElement item : childElementList) {
 			if (item.getText().equals(expectedItem)) {
@@ -306,17 +304,17 @@ public class AbstractPage {
 	}
 
 	public void waitToElementVisible(WebDriver driver, WebElement element) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	public void waitToElementInvisible(WebDriver driver, WebElement element) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOf(element));
 	}
 
 	public void waitToElementClickable(WebDriver driver, WebElement element) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 }

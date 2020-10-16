@@ -2,7 +2,6 @@ package commons;
 
 import java.util.List;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -12,28 +11,25 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import pageObjects.PageGeneratorManager;
 import pageObjects.UserCustomerAddressesPO;
 import pageObjects.UserCustomerInfoPO;
 import pageObjects.UserCustomerProductReviewsPO;
 import pageObjects.UserOrdersHistoryPO;
 import pageUIs.AbstractPageUI;
-import pageUIs.AddressesPageUI;
-import pageUIs.CustomerInfoPageUI;
-import pageUIs.MyProductReviewsPageUI;
 
 public class AbstractPage {
 
 	private WebDriverWait explicitWait;
 	private JavascriptExecutor jsExecutor;
 	private WebElement element;
-	private List<WebElement> elements;
 	private Actions action;
 	private Select select;
-	private long shortTimeOut = 5;
-	private long longTimeout = 30;
 
+	public String getDynamicLocator(String locator, String... values) {
+		return String.format(locator, (Object[]) values);
+	}
+	
 	public void openPageUrl(WebDriver driver, String url) {
 		driver.get(url);
 	}
@@ -79,7 +75,7 @@ public class AbstractPage {
 	}
 
 	public void waitAlertPresence(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.alertIsPresent());
 	}
 
@@ -134,9 +130,28 @@ public class AbstractPage {
 		element = getElement(driver, locator);
 		element.click();
 	}
+	
+	public void clickToElement(WebDriver driver, String locator, String... values) {
+		if (driver.toString().toLowerCase().contains("edge")) {
+			sleepInMiliSecond(500);
+		}
+		element = getElement(driver, getDynamicLocator(locator, values));
+		element.click();
+	}
 
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {
 		element = getElement(driver, locator);
+		element.clear();
+
+		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("edge")) {
+			sleepInMiliSecond(500);
+		}
+
+		element.sendKeys(value);
+	}
+	
+	public void sendkeyToElement(WebDriver driver, String locator, String value, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
 		element.clear();
 
 		if (driver.toString().toLowerCase().contains("chrome") || driver.toString().toLowerCase().contains("edge")) {
@@ -170,7 +185,7 @@ public class AbstractPage {
 
 		sleepInSecond(1);
 
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childItemLocator)));
 
 		List<WebElement> allItems = getElements(driver, childItemLocator);
@@ -212,6 +227,10 @@ public class AbstractPage {
 		return getElement(driver, locator).getText();
 	}
 
+	public String getElementText(WebDriver driver, String locator, String... values) {
+		return getElement(driver, getDynamicLocator(locator, values)).getText();
+	}
+	
 	public int countElementSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
 	}
@@ -232,6 +251,10 @@ public class AbstractPage {
 
 	public boolean isElementDisplay(WebDriver driver, String locator) {
 		return getElement(driver, locator).isDisplayed();
+	}
+	
+	public boolean isElementDisplay(WebDriver driver, String locator, String... values) {
+		return getElement(driver, getDynamicLocator(locator, values)).isDisplayed();
 	}
 
 	public boolean isElementEnable(WebDriver driver, String locator) {
@@ -344,18 +367,33 @@ public class AbstractPage {
 	}
 
 	public void waitToElementVisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
 
+	public void waitToElementVisible(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
+	
 	public void waitToElementInvisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
 
+	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
+
 	public void waitToElementClickable(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, longTimeout);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
+	}
+	
+	public void waitToElementClickable(WebDriver driver, String locator, String... values) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, values))));
 	}
 	
 	public UserCustomerAddressesPO openAddressesPage(WebDriver driver) {
@@ -382,4 +420,25 @@ public class AbstractPage {
 		return PageGeneratorManager.getUserOrdersHistoryPage(driver);
 	}
 
+	public AbstractPage openPageByName1(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
+		clickToElement(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
+		
+		switch (pageName) {
+		case "Addresses":
+			return PageGeneratorManager.getUserCustomerAddressesPage(driver);
+		case "My product reviews":
+			return PageGeneratorManager.getUserCustomerProductReviewsPage(driver);
+		case "Customer info":
+			return PageGeneratorManager.getUserCustomerInfoPage(driver);
+		case "Orders":
+			return PageGeneratorManager.getUserOrdersHistoryPage(driver);
+		}
+		return PageGeneratorManager.getUserOrdersHistoryPage(driver);
+	}
+	
+	public void openPageByName2(WebDriver driver, String pageName) {
+		waitToElementClickable(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
+		clickToElement(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
+	}
 }
