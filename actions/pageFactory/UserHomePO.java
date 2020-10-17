@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class UserHomePO extends AbstractPage{
 	
 	private WebDriver driver;
+	
 	@FindBy(xpath = "//a[@class='ico-register']")
 	private WebElement registerLink;
 	

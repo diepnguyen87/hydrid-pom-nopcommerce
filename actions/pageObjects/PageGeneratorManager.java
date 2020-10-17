@@ -32,4 +32,16 @@ public class PageGeneratorManager {
 		return new UserCustomerProductReviewsPO(driver);
 	}
 	
+	public static AdminLoginPO getAdminLoginPage(WebDriver driver) {
+		return new AdminLoginPO(driver);
+	}
+	
+	public static AdminDashboardPO getAdminDashboardPage(WebDriver driver) {
+		return new AdminDashboardPO(driver);
+	}
+	
+	public static AdminProductPO getAdminProductPage(WebDriver driver) {
+		return new AdminProductPO(driver);
+	}
+	
 }

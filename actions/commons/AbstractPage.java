@@ -242,8 +242,22 @@ public class AbstractPage {
 		}
 	}
 
+	public void checkToCheckbox(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
+		if (!element.isSelected()) {
+			element.click();
+		}
+	}
+
 	public void unCheckToCheckbox(WebDriver driver, String locator) {
 		element = getElement(driver, locator);
+		if (element.isSelected()) {
+			element.click();
+		}
+	}
+	
+	public void unCheckToCheckbox(WebDriver driver, String locator, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
 		if (element.isSelected()) {
 			element.click();
 		}
@@ -263,6 +277,16 @@ public class AbstractPage {
 
 	public boolean isElementSelected(WebDriver driver, String locator) {
 		return getElement(driver, locator).isSelected();
+	}
+	
+	public boolean areAllElementsSelected(WebDriver driver, String locator) {
+		List<WebElement> allElements = getElements(driver, locator);
+		for(WebElement element : allElements) {
+			if(!element.isSelected()) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	public void switchToFrame(WebDriver driver, String locator) {
@@ -385,7 +409,12 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
 	}
-
+	
+	public void waitToAllElementsPresence(WebDriver driver, String locator) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(locator)));
+	}
+	
 	public void waitToElementClickable(WebDriver driver, String locator) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));

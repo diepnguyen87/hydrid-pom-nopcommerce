@@ -2,7 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import commons.AbstractPage;
-import pageUIs.RegisterPageUI;
+import pageUIs.UserRegisterPageUI;
 
 public class UserRegisterPO extends AbstractPage{
 
@@ -13,68 +13,68 @@ public class UserRegisterPO extends AbstractPage{
 	}
 	
 	public void clickToGenderMaleRadioButton() {
-		waitToElementClickable(driver, RegisterPageUI.GENDER_MALE_RADIO);
-		clickToElement(driver, RegisterPageUI.GENDER_MALE_RADIO);
+		waitToElementClickable(driver, UserRegisterPageUI.GENDER_MALE_RADIO);
+		clickToElement(driver, UserRegisterPageUI.GENDER_MALE_RADIO);
 	}
 
 	public void inputToFirstNameTextbox(String firstName) {
-		waitToElementVisible(driver, RegisterPageUI.FIRSTNAME_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.FIRSTNAME_TEXTBOX, firstName);
+		waitToElementVisible(driver, UserRegisterPageUI.FIRSTNAME_TEXTBOX);
+		sendkeyToElement(driver, UserRegisterPageUI.FIRSTNAME_TEXTBOX, firstName);
 	}
 
 	public void inputToLastNameTextbox(String lastName) {
-		waitToElementVisible(driver, RegisterPageUI.LASTNAME_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.LASTNAME_TEXTBOX, lastName);
+		waitToElementVisible(driver, UserRegisterPageUI.LASTNAME_TEXTBOX);
+		sendkeyToElement(driver, UserRegisterPageUI.LASTNAME_TEXTBOX, lastName);
 	}
 
 	public void selectDayDropdown(String day) {
-		waitToElementClickable(driver, RegisterPageUI.DAY_DROPDOWN);
-		selectItemInDropdown(driver, RegisterPageUI.DAY_DROPDOWN, day);
+		waitToElementClickable(driver, UserRegisterPageUI.DAY_DROPDOWN);
+		selectItemInDropdown(driver, UserRegisterPageUI.DAY_DROPDOWN, day);
 	}
 
 	public void selectMonthDropdown(String month) {
-		waitToElementClickable(driver, RegisterPageUI.MONTH_DROPDOWN);
-		selectItemInDropdown(driver, RegisterPageUI.MONTH_DROPDOWN, month);		
+		waitToElementClickable(driver, UserRegisterPageUI.MONTH_DROPDOWN);
+		selectItemInDropdown(driver, UserRegisterPageUI.MONTH_DROPDOWN, month);		
 	}
 
 	public void selectYearDropdown(String year) {
-		waitToElementClickable(driver, RegisterPageUI.YEAR_DROPDOWN);
-		selectItemInDropdown(driver, RegisterPageUI.YEAR_DROPDOWN, year);		
+		waitToElementClickable(driver, UserRegisterPageUI.YEAR_DROPDOWN);
+		selectItemInDropdown(driver, UserRegisterPageUI.YEAR_DROPDOWN, year);		
 	}
 
 	public void inputToEmailTextbox(String email) {
-		waitToElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, email);
+		waitToElementVisible(driver, UserRegisterPageUI.EMAIL_TEXTBOX);
+		sendkeyToElement(driver, UserRegisterPageUI.EMAIL_TEXTBOX, email);
 	}
 
 	public void inputToCompanyTextbox(String company) {
-		waitToElementVisible(driver, RegisterPageUI.COMPANY_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.COMPANY_TEXTBOX, company);
+		waitToElementVisible(driver, UserRegisterPageUI.COMPANY_TEXTBOX);
+		sendkeyToElement(driver, UserRegisterPageUI.COMPANY_TEXTBOX, company);
 	}
 
 	public void inputToPasswordTextbox(String password) {
-		waitToElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
+		waitToElementVisible(driver, UserRegisterPageUI.PASSWORD_TEXTBOX);
+		sendkeyToElement(driver, UserRegisterPageUI.PASSWORD_TEXTBOX, password);
 	}
 
 	public void inputToConfirmPasswordTextbox(String confirmPassword) {
-		waitToElementVisible(driver, RegisterPageUI.CONFIRMPASSWORD_TEXTBOX);
-		sendkeyToElement(driver, RegisterPageUI.CONFIRMPASSWORD_TEXTBOX, confirmPassword);
+		waitToElementVisible(driver, UserRegisterPageUI.CONFIRMPASSWORD_TEXTBOX);
+		sendkeyToElement(driver, UserRegisterPageUI.CONFIRMPASSWORD_TEXTBOX, confirmPassword);
 	}
 
 	public void clickToRegisterButton() {
-		waitToElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
-		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
+		waitToElementClickable(driver, UserRegisterPageUI.REGISTER_BUTTON);
+		clickToElement(driver, UserRegisterPageUI.REGISTER_BUTTON);
 	}
 
 	public String getRegisterSuccessMessage() {
-		waitToElementVisible(driver, RegisterPageUI.REGISTERED_SUCCESS_MSG);
-		return getElementText(driver, RegisterPageUI.REGISTERED_SUCCESS_MSG);
+		waitToElementVisible(driver, UserRegisterPageUI.REGISTERED_SUCCESS_MSG);
+		return getElementText(driver, UserRegisterPageUI.REGISTERED_SUCCESS_MSG);
 	}
 
 	public UserHomePO clickToLogoutLink() {
-		waitToElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
-		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
+		waitToElementClickable(driver, UserRegisterPageUI.LOGOUT_LINK);
+		clickToElement(driver, UserRegisterPageUI.LOGOUT_LINK);
 		return PageGeneratorManager.getUserHomePage(driver);
 	}
 

@@ -1,121 +1,79 @@
 package com.nopcommerce.admin;
 
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import commons.AbstractPage;
-import pageObjects.UserCustomerInfoPO;
-import pageObjects.UserHomePO;
-import pageObjects.UserLoginPO;
-import pageObjects.UserRegisterPO;
 
-public class Level_09_Web_Data_Table extends AbstractPage {
+import commons.AbstractTest;
+import pageObjects.AdminDashboardPO;
+import pageObjects.AdminLoginPO;
+import pageObjects.AdminProductPO;
+import pageObjects.PageGeneratorManager;
+import pageUIs.AdminProductPageUI;
+
+public class Level_09_Web_Data_Table extends AbstractTest {
 
 	private WebDriver driver;
-	private String webURL = "https://demo.nopcommerce.com/";
 	private String projectURL = System.getProperty("user.dir");
-	private String firstName, lastName, email, company, password, confirmPassword, day, month, year;
 	
-	private UserHomePO homePage;
-	private UserLoginPO loginPage;
-	private UserRegisterPO registerPage;
-	private UserCustomerInfoPO customerInfoPage;
+	private AdminLoginPO loginPage;
+	private AdminDashboardPO dashboardPage;
+	private AdminProductPO productPage;
 	
+	@Parameters({"browser", "url"})
 	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectURL + "/browserDrivers/geckodriver.exe");
+	public void beforeClass(String browserName, String webURL) {
 		
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		openPageUrl(driver, webURL);
+		driver = getBrowserDriver(browserName, webURL);
+		loginPage = PageGeneratorManager.getAdminLoginPage(driver);
 		
-		firstName = "Van";
-		lastName = "Tran";
-		email = firstName + "." + lastName + getRandomNumber() + "@gmail.com";
-		company = "KITS";
-		password = "123?Abcd";
-		confirmPassword = "123?Abcd";
-		day = "18";
-		month = "August";
-		year = "1958";
+		dashboardPage = loginPage.loginToSystem("admin@yourstore.com", "admin");
+		productPage = dashboardPage.openProductPage();
 	}
 
-	@Test
-	public void TC_01_Register() {
-		homePage = new UserHomePO(driver);
-		homePage.clickToRegisterLink();
+	public void TC_01_Data_Table() {
+		productPage.goToPageAtTableByIndex("2");
+		Assert.assertTrue(productPage.isPageActivedAtTableByIndex("2"));
 		
-		registerPage = new UserRegisterPO(driver);
+		productPage.goToPageAtTableByIndex("1");
+		Assert.assertTrue(productPage.isPageActivedAtTableByIndex("1"));
 		
-		registerPage.clickToGenderMaleRadioButton();
-		registerPage.inputToFirstNameTextbox(firstName);
-		registerPage.inputToLastNameTextbox(lastName);
+		productPage.goToPageAtTableByIndex("3");
+		Assert.assertTrue(productPage.isPageActivedAtTableByIndex("3"));
 		
-		registerPage.selectDayDropdown("18");
-		registerPage.selectMonthDropdown("August");
-		registerPage.selectYearDropdown("1958");
-		
-		registerPage.inputToEmailTextbox(email);
-		registerPage.inputToCompanyTextbox(company);
-		registerPage.inputToPasswordTextbox(password);
-		registerPage.inputToConfirmPasswordTextbox(confirmPassword);
-	
-		registerPage.clickToRegisterButton();
-		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
-		
-		registerPage.clickToLogoutLink();
-		homePage = new UserHomePO(driver);
+		productPage.goToPageAtTableByIndex("2");
+		Assert.assertTrue(productPage.isPageActivedAtTableByIndex("2"));
 	}
 	
 	@Test
-	public void TC_02_Login() {
-		homePage.clickToLoginLink();
+	public void TC_02_Select_Deselect_All() {
 		
-		loginPage = new UserLoginPO(driver);
-		loginPage.inputToEmailTextbox(email);
-		loginPage.inputToPasswordTextbox(password);
-		loginPage.clickToLoginButton();
-
-		homePage = new UserHomePO(driver);
-		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-		Assert.assertTrue(homePage.isLogoutLinkDisplayed());
-	}
-	
-	@Test
-	public void TC_03_View_My_Account() {
-		homePage.clickToMyAccountLink();
+		productPage.checkToSelectAllCheckbox();
+		Assert.assertTrue(productPage.areProductCheckboxChecked());
+		productPage.sleepInSecond(3);
 		
-		customerInfoPage = new UserCustomerInfoPO(driver);
-		Assert.assertTrue(customerInfoPage.isGenderMaleRadioButtonSelected());
-	
+		productPage.uncheckToSelectAllCheckbox();
+		Assert.assertFalse(productPage.areProductCheckboxChecked());
+		productPage.sleepInSecond(3);
 		
-		Assert.assertEquals(customerInfoPage.getFirstNameTextboxValue(), firstName);
-		Assert.assertEquals(customerInfoPage.getLastNameTextboxvalue(), lastName);
-	
-		Assert.assertEquals(customerInfoPage.getSelectedTextInDayDropdown(), day);
-		Assert.assertEquals(customerInfoPage.getSelectedTextInMonthDropdown(), month);
-		Assert.assertEquals(customerInfoPage.getSelectedTextInYearDropdown(), year);
-	
-		Assert.assertEquals(customerInfoPage.getEmailTextboxValue(), email);
-		Assert.assertEquals(customerInfoPage.getCompanyTextboxValue(), company);
+		productPage.checkToProductCheckboxByName("$100 Physical Gift Card");
+		productPage.sleepInSecond(3);
+		productPage.checkToProductCheckboxByName("$100 Physical Gift Card");
+		
+		productPage.checkToProductCheckboxByName("adidas Consortium Campus 80s Running Shoes");
+		productPage.sleepInSecond(3);
+		
+		productPage.checkToProductCheckboxByName("Apple MacBook Pro 13-inch");
+		productPage.sleepInSecond(3);
 		
 	}
-	
-	private int getRandomNumber() {
-		Random random = new Random();
-		return random.nextInt(999999);
-	}
-	
 	
 	@AfterClass
 	public void afterClass() {
-		driver.close();
+		//driver.close();
 	}
 
 }

@@ -2,7 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import commons.AbstractPage;
-import pageUIs.HomePageUI;
+import pageUIs.UserHomePageUI;
 
 public class UserHomePO extends AbstractPage{
 	
@@ -13,30 +13,30 @@ public class UserHomePO extends AbstractPage{
 	}
 
 	public UserRegisterPO clickToRegisterLink() {
-		waitToElementClickable(driver, HomePageUI.REGISTER_LINK);
-		clickToElement(driver, HomePageUI.REGISTER_LINK);
+		waitToElementClickable(driver, UserHomePageUI.REGISTER_LINK);
+		clickToElement(driver, UserHomePageUI.REGISTER_LINK);
 		return PageGeneratorManager.getUserRegisterPage(driver);
 	}
 
 	public UserLoginPO clickToLoginLink() {
-		waitToElementClickable(driver, HomePageUI.LOGIN_LINK);
-		clickToElement(driver, HomePageUI.LOGIN_LINK);
+		waitToElementClickable(driver, UserHomePageUI.LOGIN_LINK);
+		clickToElement(driver, UserHomePageUI.LOGIN_LINK);
 		return PageGeneratorManager.getUserLoginPage(driver);
 	}
 
 	public boolean isMyAccountLinkDisplayed() {
-		waitToElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);
-		return isElementDisplay(driver, HomePageUI.MY_ACCOUNT_LINK);
+		waitToElementVisible(driver, UserHomePageUI.MY_ACCOUNT_LINK);
+		return isElementDisplay(driver, UserHomePageUI.MY_ACCOUNT_LINK);
 	}
 
 	public boolean isLogoutLinkDisplayed() {
-		waitToElementVisible(driver, HomePageUI.LOGOUT_LINK);
-		return isElementDisplay(driver, HomePageUI.LOGOUT_LINK);
+		waitToElementVisible(driver, UserHomePageUI.LOGOUT_LINK);
+		return isElementDisplay(driver, UserHomePageUI.LOGOUT_LINK);
 	}
 
 	public UserCustomerInfoPO clickToMyAccountLink() {
-		waitToElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
-		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
+		waitToElementClickable(driver, UserHomePageUI.MY_ACCOUNT_LINK);
+		clickToElement(driver, UserHomePageUI.MY_ACCOUNT_LINK);
 		return PageGeneratorManager.getUserCustomerInfoPage(driver);
 	}
 

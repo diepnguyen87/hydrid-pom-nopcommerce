@@ -1,21 +1,17 @@
 package com.nopcommerce.users;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import commons.AbstractTest;
-import pageObjects.UserLoginPO;
-import pageObjects.UserRegisterPO;
 import pageObjects.UserCustomerInfoPO;
 import pageObjects.UserHomePO;
+import pageObjects.UserLoginPO;
+import pageObjects.UserRegisterPO;
 
 public class Level_05_Register_Login_Page_Factory extends AbstractTest {
 

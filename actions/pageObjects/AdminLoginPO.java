@@ -2,7 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import commons.AbstractPage;
-import pageUIs.LoginPageUI;
+import pageUIs.AdminLoginPageUI;
 
 public class AdminLoginPO extends AbstractPage{
 
@@ -13,18 +13,25 @@ public class AdminLoginPO extends AbstractPage{
 	}
 	
 	public void inputToEmailTextbox(String email) {
-		waitToElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, email);
+		waitToElementVisible(driver, AdminLoginPageUI.EMAIL_TEXTBOX);
+		sendkeyToElement(driver, AdminLoginPageUI.EMAIL_TEXTBOX, email);
 	}
 
 	public void inputToPasswordTextbox(String password) {
-		waitToElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
-		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+		waitToElementVisible(driver, AdminLoginPageUI.PASSWORD_TEXTBOX);
+		sendkeyToElement(driver, AdminLoginPageUI.PASSWORD_TEXTBOX, password);
 	}
 
-	public void clickToLoginButton() {
-		waitToElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
-		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+	public AdminDashboardPO clickToLoginButton() {
+		waitToElementClickable(driver, AdminLoginPageUI.LOGIN_BUTTON);
+		clickToElement(driver, AdminLoginPageUI.LOGIN_BUTTON);
+		return PageGeneratorManager.getAdminDashboardPage(driver);
+	}
+
+	public AdminDashboardPO loginToSystem(String email, String password) {
+		inputToEmailTextbox(email);
+		inputToPasswordTextbox(password);
+		return clickToLoginButton();
 	}
 
 }
