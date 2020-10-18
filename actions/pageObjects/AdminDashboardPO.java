@@ -21,7 +21,7 @@ public class AdminDashboardPO extends AbstractPage{
 		waitToElementClickable(driver, AdminDashboardPageUI.PRODUCT_LINK_AT_SIDEBAR);
 		clickToElement(driver, AdminDashboardPageUI.PRODUCT_LINK_AT_SIDEBAR);
 		
-		waitToElementInvisible(driver, AbstractPageUI.LOADING_ICON);
+		waitToLoadingIconInvisible(driver);
 		
 		return PageGeneratorManager.getAdminProductPage(driver);
 	}

@@ -7,4 +7,11 @@ public class AdminProductPageUI {
 	public static final String SELECT_ALL_CHECKBOX = "//th/input[@id='mastercheckbox']";
 	public static final String ALL_PRODUCT_CHECKBOX = "//input[@name='checkbox_products']";
 	public static final String PRODUCT_CHECKBOX_BY_NAME = "//td[text()='%s']/preceding-sibling::td/input";
+	public static final String PRODUCT_DETAIL = "//td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td/i[contains(@class,'%s-icon')]";
+	public static final String SHOW_ITEMS_DROPDOWN = "//select[@name='products-grid_length']";
+	public static final String COLUMN_NAME_SIBLING = "//th[text()='%s']/preceding-sibling::th";
+	public static final String CELL_DETAIL = "//tr[%s]/td[%s]";
+	public static final String PUBLISH_STATUS_CELL = "//tr[%s]/td[%s]/i[contains(@class, '%s-icon')]";
+	public static final String EDIT_BUTTON_BY_PRODUCT_NAME = "//td[text()='Apple iCam']/following-sibling::td/a";
+	
 }

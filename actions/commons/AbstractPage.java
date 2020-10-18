@@ -119,8 +119,8 @@ public class AbstractPage {
 		return driver.findElement(getByXpath(locator));
 	}
 
-	public List<WebElement> getElements(WebDriver driver, String locator) {
-		return driver.findElements(getByXpath(locator));
+	public List<WebElement> getElements(WebDriver driver, String locator, String... values) {
+		return driver.findElements(getByXpath(getDynamicLocator(locator, values)));
 	}
 
 	public void clickToElement(WebDriver driver, String locator) {
@@ -226,7 +226,7 @@ public class AbstractPage {
 	public String getElementText(WebDriver driver, String locator) {
 		return getElement(driver, locator).getText();
 	}
-
+	
 	public String getElementText(WebDriver driver, String locator, String... values) {
 		return getElement(driver, getDynamicLocator(locator, values)).getText();
 	}
@@ -408,6 +408,11 @@ public class AbstractPage {
 	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+	}
+	
+	public void waitToLoadingIconInvisible(WebDriver driver) {
+		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(AbstractPageUI.LOADING_ICON))));
 	}
 	
 	public void waitToAllElementsPresence(WebDriver driver, String locator) {
