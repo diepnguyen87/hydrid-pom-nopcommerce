@@ -14,7 +14,7 @@
 		<parameter name="url" value="https://admin-demo.nopcommerce.com/" />
 		<classes>
 			<class
-				name="com.nopcommerce.admin.Level_09_Web_Data_Table" />
+				name="com.nopcommerce.admin.Level_10_Upload_File" />
 		</classes>
 	</test>
 	

@@ -1,7 +1,5 @@
 package com.nopcommerce.admin;
 
-import static org.testng.Assert.assertEquals;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -14,13 +12,10 @@ import pageObjects.AdminDashboardPO;
 import pageObjects.AdminLoginPO;
 import pageObjects.AdminProductPO;
 import pageObjects.PageGeneratorManager;
-import pageUIs.AdminProductPageUI;
 
 public class Level_09_Web_Data_Table extends AbstractTest {
 
 	private WebDriver driver;
-	private String projectURL = System.getProperty("user.dir");
-
 	private AdminLoginPO loginPage;
 	private AdminDashboardPO dashboardPage;
 	private AdminProductPO productPage;
@@ -74,7 +69,6 @@ public class Level_09_Web_Data_Table extends AbstractTest {
 
 		productPage.selectShowItemsDropdown("50");
 		Assert.assertTrue(productPage.areProductDetailDisplayed("First Prize Pies", "FIRST_PRP", "51", "10000", "Simple", "false"));
-
 		
 	}
 	

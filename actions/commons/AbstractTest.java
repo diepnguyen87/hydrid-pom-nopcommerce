@@ -96,48 +96,23 @@ public class AbstractTest {
 	}
 
 	private void setBrowserDriver() {
-		if(isWindows()) {
-			System.setProperty("webdriver.gecko.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "geckodriver.exe");
-			System.setProperty("webdriver.chrome.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "chromedriver.exe");
-			System.setProperty("webdriver.edge.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "msedgedriver.exe");
-		}else if(isMac()) {
-			System.setProperty("webdriver.gecko.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "geckodriver_mac");
-			System.setProperty("webdriver.chrome.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "/chromedriver_mac");
-			System.setProperty("webdriver.edge.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "/msedgedriver_mac");
+		if(GlobalConstants.isWindows()) {
+			System.setProperty("webdriver.gecko.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "geckodriver.exe");
+			System.setProperty("webdriver.chrome.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "chromedriver.exe");
+			System.setProperty("webdriver.edge.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "msedgedriver.exe");
+		}else if(GlobalConstants.isMac()) {
+			System.setProperty("webdriver.gecko.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "geckodriver_mac");
+			System.setProperty("webdriver.chrome.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "/chromedriver_mac");
+			System.setProperty("webdriver.edge.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "/msedgedriver_mac");
 		}else {
-			System.setProperty("webdriver.gecko.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "/geckodriver");
-			System.setProperty("webdriver.chrome.driver", GlobalConstants.ROOT_FOLDER + getDirectorySlash("browserDrivers") + "/chromedriver_linux");
+			System.setProperty("webdriver.gecko.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "/geckodriver");
+			System.setProperty("webdriver.chrome.driver", GlobalConstants.ROOT_FOLDER + GlobalConstants.getDirectorySlash("browserDrivers") + "/chromedriver_linux");
 		}
 	}
-	
 	
 	protected int getRandomNumber() {
 		Random random = new Random();
 		return random.nextInt(999999);
 	}
 	
-	private String getDirectorySlash(String folderName) {
-		if(isMac() || isUnix() || isSolaris()) {
-			folderName = "/" + folderName + "/";
-		}else {
-			folderName = "\\" + folderName + "\\";
-		}
-		return folderName;
-	}
-	
-	private boolean isWindows() {
-		return (GlobalConstants.OS_NAME.toLowerCase().indexOf("win") >= 0);
-	}
-
-	private boolean isMac() {
-		return (GlobalConstants.OS_NAME.toLowerCase().indexOf("mac") >= 0);
-	}
-
-	private boolean isUnix() {
-		return (GlobalConstants.OS_NAME.toLowerCase().indexOf("nix") >= 0 || GlobalConstants.OS_NAME.toLowerCase().indexOf("nux") >= 0 || GlobalConstants.OS_NAME.toLowerCase().indexOf("aix") > 0);
-	}
-
-	private boolean isSolaris() {
-		return (GlobalConstants.OS_NAME.toLowerCase().indexOf("sunos") >= 0);
-	}
 }

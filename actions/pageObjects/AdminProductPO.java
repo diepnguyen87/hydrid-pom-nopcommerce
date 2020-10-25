@@ -6,6 +6,7 @@ import org.openqa.selenium.remote.server.handler.GetElementDisplayed;
 import com.google.common.cache.LoadingCache;
 
 import commons.AbstractPage;
+import pageUIs.AbstractPageUI;
 import pageUIs.AdminProductPageUI;
 
 public class AdminProductPO extends AbstractPage{
@@ -49,8 +50,8 @@ public class AdminProductPO extends AbstractPage{
 		waitToLoadingIconInvisible(driver);
 	}
 
-	public boolean areProductDetailDisplayed(String productName, String skuID, String price, String stockQuantity, String productType, String publishStatus) {
-		return isElementDisplay(driver, AdminProductPageUI.PRODUCT_DETAIL, productName, skuID, price, stockQuantity, productType, publishStatus);
+	public boolean areProductDetailDisplayed(String pictureName, String skuID, String price, String stockQuantity, String productType, String publishedStatus) {
+		return isElementDisplay(driver, AdminProductPageUI.PRODUCT_DETAIL, pictureName, skuID, price, stockQuantity, productType, publishedStatus);
 	}
 
 	public void selectShowItemsDropdown(String value) {
@@ -69,10 +70,79 @@ public class AdminProductPO extends AbstractPage{
 		return isElementDisplay(driver, AdminProductPageUI.PUBLISH_STATUS_CELL, rowNumber, String.valueOf(columnNumber), expectedValue);
 	}
 
-	public void openEditPageByProductName(String string) {
-		waitToElementClickable(driver, AdminProductPageUI.EDIT_BUTTON_BY_PRODUCT_NAME);
-		clickToElement(driver, AdminProductPageUI.EDIT_BUTTON_BY_PRODUCT_NAME);
+	public void openEditPageByProductName(String productName) {
+		waitToElementClickable(driver, AdminProductPageUI.EDIT_BUTTON_BY_PRODUCT_NAME, productName);
+		clickToElement(driver, AdminProductPageUI.EDIT_BUTTON_BY_PRODUCT_NAME, productName);
 		waitToLoadingIconInvisible(driver);
 	}
 
+	public void inputToProductNameTextbox(String productName) {
+		waitToElementVisible(driver, AdminProductPageUI.PRODUCT_NAME_TEXTBOX);
+		sendkeyToElement(driver, AdminProductPageUI.PRODUCT_NAME_TEXTBOX, productName);
+	}
+
+	public void clickToSearchButton() {
+		waitToElementVisible(driver, AdminProductPageUI.SEARCH_BUTTON);
+		clickToElement(driver, AdminProductPageUI.SEARCH_BUTTON);
+		waitToLoadingIconInvisible(driver);
+	}
+
+	public void scrollToPanelID(String panelID) {
+		scrollToElement(driver, AbstractPageUI.PANEL_BY_ID, panelID);
+	}
+
+	public void inputToAltTextbox(String value) {
+		waitToElementVisible(driver, AdminProductPageUI.ALT_TEXTBOX);
+		sendkeyToElement(driver, AdminProductPageUI.ALT_TEXTBOX, value);
+	}
+
+	public void inputToTitleTextbox(String value) {
+		waitToElementVisible(driver, AdminProductPageUI.TITLE_TEXTBOX);
+		sendkeyToElement(driver, AdminProductPageUI.TITLE_TEXTBOX, value);
+	}
+
+	public String selectValueForOrderTextbox(String action) {
+		waitToElementVisible(driver, AdminProductPageUI.INCREASE_DECREASE_ICON_FOR_ORDER, action);
+		//sendkeyToElementByJS(driver, AdminProductPageUI.ORDER_TEXTBOX, value);
+		clickToElement(driver, AdminProductPageUI.INCREASE_DECREASE_ICON_FOR_ORDER, action);
+		return getElementAttribute(driver, AdminProductPageUI.ORDER_TEXTBOX, "aria-valuenow");
+	}
+
+	public void clickToAddProductPictureButton() {
+		waitToElementClickable(driver, AdminProductPageUI.ADD_PRODUCT_PICTURE_BUTTON);
+		clickToElement(driver, AdminProductPageUI.ADD_PRODUCT_PICTURE_BUTTON);
+	}
+
+	public boolean areProductInfoDisplayed(String pictureName, String orderNumber, String alt, String title) {
+		return isElementDisplay(driver, AbstractPageUI.PICTURE_PANEL_DETAIL, pictureName, orderNumber, alt, title); 
+	}
+
+	public void clickToSaveButton() {
+		waitToElementClickable(driver, AdminProductPageUI.SAVE_BUTTON);
+		clickToElement(driver, AdminProductPageUI.SAVE_BUTTON);
+		waitToLoadingIconInvisible(driver);
+	}
+
+	public void deletePictureByTitle(String pictureTitle) {
+		waitToElementVisible(driver, AdminProductPageUI.DELETE_BUTTON_BY_PICTURE_TITLE, pictureTitle);
+		clickToElement(driver, AdminProductPageUI.DELETE_BUTTON_BY_PICTURE_TITLE, pictureTitle);
+		waitAlertPresence(driver);
+		acceptAlert(driver);
+		waitToLoadingIconInvisible(driver);
+	}
+
+	public void openPanelByID(String panelID) {
+		String classAttribute = getElementAttribute(driver, AbstractPageUI.EXPANDED_ICON_BY_PANEL_ID, "class", panelID);
+		if(classAttribute.contains("fa-plus")) {
+			waitToElementClickable(driver, AbstractPageUI.PANEL_BY_ID, panelID);
+			clickToElement(driver, AbstractPageUI.PANEL_BY_ID, panelID);
+			sleepInMiliSecond(2);
+		}
+	}
+
+	public boolean isPictureImageUploadedSuccessfully(String panelID) {
+		waitToElementVisible(driver, AdminProductPageUI.QQ_UPLOAD_BUTTON_BY_PANEL_ID, panelID);
+		return isElementDisplay(driver, AdminProductPageUI.QQ_UPLOAD_BUTTON_BY_PANEL_ID, panelID);
+	}
+	
 }

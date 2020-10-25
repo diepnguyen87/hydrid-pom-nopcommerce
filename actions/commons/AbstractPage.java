@@ -17,6 +17,7 @@ import pageObjects.UserCustomerInfoPO;
 import pageObjects.UserCustomerProductReviewsPO;
 import pageObjects.UserOrdersHistoryPO;
 import pageUIs.AbstractPageUI;
+import pageUIs.AdminProductPageUI;
 
 public class AbstractPage {
 
@@ -115,8 +116,8 @@ public class AbstractPage {
 		return By.xpath(locator);
 	}
 
-	public WebElement getElement(WebDriver driver, String locator) {
-		return driver.findElement(getByXpath(locator));
+	public WebElement getElement(WebDriver driver, String locator, String... values) {
+		return driver.findElement(getByXpath(getDynamicLocator(locator, values)));
 	}
 
 	public List<WebElement> getElements(WebDriver driver, String locator, String... values) {
@@ -219,8 +220,8 @@ public class AbstractPage {
 		}
 	}
 
-	public String getElementAttribute(WebDriver driver, String locator, String attributeName) {
-		return getElement(driver, locator).getAttribute(attributeName);
+	public String getElementAttribute(WebDriver driver, String locator, String attributeName, String... values) {
+		return getElement(driver, getDynamicLocator(locator, values)).getAttribute(attributeName);
 	}
 
 	public String getElementText(WebDriver driver, String locator) {
@@ -365,10 +366,11 @@ public class AbstractPage {
 		jsExecutor.executeScript("arguments[0].click();", element);
 	}
 
-	public void scrollToElement(WebDriver driver, String locator) {
+	public void scrollToElement(WebDriver driver, String locator, String... values) {
 		jsExecutor = (JavascriptExecutor) driver;
-		element = getElement(driver, locator);
+		element = getElement(driver, getDynamicLocator(locator, values));
 		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
+		sleepInSecond(1);
 	}
 
 	public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
@@ -475,4 +477,30 @@ public class AbstractPage {
 		waitToElementClickable(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
 		clickToElement(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
 	}
+	
+	public void uploadFileByPanelID(WebDriver driver, String panelID, String... fileNames) {
+		String fullFileName = "";
+		for(String file : fileNames) {
+			fullFileName = fullFileName + GlobalConstants.UPLOAD_FOLDER + file + "\n";
+		}
+	    fullFileName = fullFileName.trim();
+	    getElement(driver, AbstractPageUI.UPLOAD_FILE_BY_PANEL_ID, panelID).sendKeys(fullFileName);
+	}
+	
+	public void uploadMultipleFile(WebDriver driver, String... fileNames) {
+		String fullFileName = "";
+		for(String file : fileNames) {
+			fullFileName = fullFileName + GlobalConstants.UPLOAD_FOLDER + file + "\n";
+		}
+	    fullFileName = fullFileName.trim();
+	    getElement(driver, AbstractPageUI.UPLOAD_FILE).sendKeys(fullFileName);
+	}
+	
+	
+	public int getValueByColumnAndRow(WebDriver driver, String panelID, String columnName, String rowNumber) {
+		int columnNumber = getElements(driver, AbstractPageUI.COLUMN_NAME_BY_PANEL_ID, panelID, columnName).size() + 1;
+		String actualValue = getElementText(driver, AbstractPageUI.CELL_BY_PANEL_ID, panelID, rowNumber, String.valueOf(columnNumber));
+		return Integer.parseInt(actualValue);
+	}
+
 }
