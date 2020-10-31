@@ -45,7 +45,7 @@
 		<parameter name="browser" value="edge_chromium"></parameter>
 		<classes>
 			<class
-				name="com.nopcommerce.users.Level_08_Register_Login_Rest_Parameter" />
+				name="com.nopcommerce.users.Level_11_Register_Login_Element_Undisplayed" />
 					
 		</classes>
 	</test>

@@ -64,7 +64,7 @@ public class Level_07_Register_Login_Switch_Page_Type extends AbstractTest {
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(confirmPassword);
 
-		registerPage.clickToRegisterButton();
+		registerPage.clickToRegisterLink();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		homePage = registerPage.clickToLogoutLink();

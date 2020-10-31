@@ -64,7 +64,7 @@ public class Level_05_Register_Login_Page_Factory extends AbstractTest {
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(confirmPassword);
 
-		registerPage.clickToRegisterButton();
+		registerPage.clickToRegisterLink();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		registerPage.clickToLogoutLink();

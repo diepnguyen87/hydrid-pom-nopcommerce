@@ -64,7 +64,7 @@ public class Level_03_Register_Login_Page_Object {
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(confirmPassword);
 	
-		registerPage.clickToRegisterButton();
+		registerPage.clickToRegisterLink();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		
 		registerPage.clickToLogoutLink();

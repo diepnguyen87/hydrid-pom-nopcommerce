@@ -13,7 +13,7 @@ public class UserRegisterPageUI {
 	public static final String PASSWORD_TEXTBOX = "//input[@id='Password']";
 	public static final String CONFIRMPASSWORD_TEXTBOX = "//input[@id='ConfirmPassword']";
 	
-	public static final String REGISTER_BUTTON =  "//input[@id='register-button']";
+	public static final String REGISTER_LINK =  "//input[@id='register-button']";
 	public static final String REGISTERED_SUCCESS_MSG = "//div[@class='result']";
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
 }

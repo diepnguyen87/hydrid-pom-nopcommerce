@@ -2,6 +2,8 @@ package commons;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -265,11 +267,19 @@ public class AbstractPage {
 	}
 
 	public boolean isElementDisplay(WebDriver driver, String locator) {
-		return getElement(driver, locator).isDisplayed();
+		try {
+			return getElement(driver, locator).isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
 	}
 	
 	public boolean isElementDisplay(WebDriver driver, String locator, String... values) {
 		return getElement(driver, getDynamicLocator(locator, values)).isDisplayed();
+	}
+	
+	public void overrideImplicitWait(WebDriver driver) {
+		
 	}
 
 	public boolean isElementEnable(WebDriver driver, String locator) {
@@ -403,13 +413,19 @@ public class AbstractPage {
 	}
 	
 	public void waitToElementInvisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.SHORT_TIMEOUT);
+		
+		overrideImplicitTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
+		overrideImplicitTimeout(driver, GlobalConstants.LONG_TIMEOUT);
 	}
 
 	public void waitToElementInvisible(WebDriver driver, String locator, String... values) {
-		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
+		explicitWait = new WebDriverWait(driver, GlobalConstants.SHORT_TIMEOUT);
+		
+		overrideImplicitTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, values))));
+		overrideImplicitTimeout(driver, GlobalConstants.LONG_TIMEOUT);
 	}
 	
 	public void waitToLoadingIconInvisible(WebDriver driver) {
@@ -496,11 +512,27 @@ public class AbstractPage {
 	    getElement(driver, AbstractPageUI.UPLOAD_FILE).sendKeys(fullFileName);
 	}
 	
-	
 	public int getValueByColumnAndRow(WebDriver driver, String panelID, String columnName, String rowNumber) {
 		int columnNumber = getElements(driver, AbstractPageUI.COLUMN_NAME_BY_PANEL_ID, panelID, columnName).size() + 1;
 		String actualValue = getElementText(driver, AbstractPageUI.CELL_BY_PANEL_ID, panelID, rowNumber, String.valueOf(columnNumber));
 		return Integer.parseInt(actualValue);
 	}
 
+	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+		overrideImplicitTimeout(driver, GlobalConstants.SHORT_TIMEOUT);
+		List<WebElement> elements = driver.findElements(By.xpath(locator));
+		overrideImplicitTimeout(driver, GlobalConstants.LONG_TIMEOUT);
+		
+		if(elements.size() == 0) {
+			return true;
+		}else if(elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public void overrideImplicitTimeout(WebDriver driver, long seconds) {
+		driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+	}
 }

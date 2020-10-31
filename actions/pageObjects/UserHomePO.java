@@ -40,4 +40,29 @@ public class UserHomePO extends AbstractPage{
 		return PageGeneratorManager.getUserCustomerInfoPage(driver);
 	}
 
+	public boolean isRegisterLinkDisplayed() {
+		waitToElementClickable(driver, UserHomePageUI.REGISTER_LINK);
+		return isElementDisplay(driver, UserHomePageUI.REGISTER_LINK);
+	}
+
+	public boolean isLoginLinkDisplayed() {
+		waitToElementClickable(driver, UserHomePageUI.LOGIN_LINK);
+		return isElementDisplay(driver, UserHomePageUI.LOGIN_LINK);
+	}
+
+	public boolean isShoppingCartToolTipDisplayed() {
+		waitToElementClickable(driver, UserHomePageUI.SHOPPING_CART_TOOLTIP);
+		return isElementDisplay(driver, UserHomePageUI.SHOPPING_CART_TOOLTIP);
+	}
+
+	public boolean isRegisterLinkUndisplayed(){
+		waitToElementInvisible(driver, UserHomePageUI.REGISTER_LINK);
+		return isElementUndisplayed(driver, UserHomePageUI.REGISTER_LINK);
+	}
+
+	public boolean isLoginLinkUndisplayed() {
+		waitToElementInvisible(driver, UserHomePageUI.LOGIN_LINK);
+		return isElementUndisplayed(driver, UserHomePageUI.LOGIN_LINK);
+	}
+
 }

@@ -62,9 +62,9 @@ public class UserRegisterPO extends AbstractPage{
 		sendkeyToElement(driver, UserRegisterPageUI.CONFIRMPASSWORD_TEXTBOX, confirmPassword);
 	}
 
-	public void clickToRegisterButton() {
-		waitToElementClickable(driver, UserRegisterPageUI.REGISTER_BUTTON);
-		clickToElement(driver, UserRegisterPageUI.REGISTER_BUTTON);
+	public void clickToRegisterLink() {
+		waitToElementClickable(driver, UserRegisterPageUI.REGISTER_LINK);
+		clickToElement(driver, UserRegisterPageUI.REGISTER_LINK);
 	}
 
 	public String getRegisterSuccessMessage() {

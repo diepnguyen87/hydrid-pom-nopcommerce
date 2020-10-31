@@ -64,7 +64,7 @@ public class Level_08_Register_Login_Rest_Parameter extends AbstractTest {
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(confirmPassword);
 
-		registerPage.clickToRegisterButton();
+		registerPage.clickToRegisterLink();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		homePage = registerPage.clickToLogoutLink();

@@ -58,7 +58,7 @@ public class Level_06_Register_Login_Page_Generator_Manager extends AbstractTest
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(confirmPassword);
 
-		registerPage.clickToRegisterButton();
+		registerPage.clickToRegisterLink();
 		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
 		homePage = registerPage.clickToLogoutLink();
