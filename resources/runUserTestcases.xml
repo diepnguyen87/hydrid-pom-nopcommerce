@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
 
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+	</listeners>
+	
 	<!-- <test name="Run on IE UI">
 		<parameter name="browser" value="ie_ui"></parameter>
 		<classes>
