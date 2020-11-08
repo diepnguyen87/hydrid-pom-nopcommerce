@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="false">
+<suite name="Nop Commerce - Admin" parallel="false">
 
-	<!-- <test name="Test">
-		<parameter name="browser" value="edge_chromium"></parameter>
-		<parameter name="url" value="https://admin-demo.nopcommerce.com/" />
-		<classes>
-			<class name="com.nopcommerce.admin.Level_09_Web_Data_Table" />
-		</classes>
-	</test> -->
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
+	</listeners>
 	
+	<!-- <test name="Test"> <parameter name="browser" value="edge_chromium"></parameter> <parameter name="url" value="https://admin-demo.nopcommerce.com/" /> <classes> <class name="com.nopcommerce.admin.Level_09_Web_Data_Table" /> </classes> </test> -->
+
 	<test name="Run on FIREFOX UI">
 		<parameter name="browser" value="firefox_ui"></parameter>
 		<parameter name="url" value="https://admin-demo.nopcommerce.com/" />
 		<classes>
-			<class
-				name="com.nopcommerce.admin.Level_10_Upload_File" />
+			<class name="com.nopcommerce.admin.Level_10_Upload_File" />
 		</classes>
 	</test>
-	
+
+	<test name="Run on EDGE CHROMIUM">
+		<parameter name="browser" value="edge_chromium"></parameter>
+		<classes>
+			<class name="com.nopcommerce.admin.Level_10_Upload_File" />
+
+		</classes>
+	</test>
+
 </suite> <!-- Suite -->

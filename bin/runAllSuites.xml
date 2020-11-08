@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nop Commerce - All" parallel="false">
+
+	<suite-files>
+		<suite-file path="runAdminTestcases.xml" />
+		<suite-file path="runUserTestcases.xml" />
+	</suite-files>
+</suite>
