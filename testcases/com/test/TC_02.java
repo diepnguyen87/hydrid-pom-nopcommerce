@@ -16,7 +16,7 @@ public class TC_02 extends AbstractTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) throws Exception {
-		driver = getBrowserDriver(browserName);
+		driver = getBrowserDriver(browserName, "http://agiletesters.com.br");
 	}
 
 	@Test
