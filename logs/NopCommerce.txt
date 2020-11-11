@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-11-12 00:38:50,290 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 01: Open home page
 2020-11-12 00:38:50,296 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 01: verify register link displayed
 2020-11-12 00:38:50,725 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
@@ -30,3 +31,5 @@
 2020-11-12 00:39:11,680 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
 2020-11-12 00:39:11,682 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 08: verify login link undisplayed
 2020-11-12 00:39:31,916 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- FAILED -------------------------- 
+=======
+>>>>>>> branch 'master' of https://github.com/diepnguyen87/hydrid-pom-nopcommerce
