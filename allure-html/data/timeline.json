@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DiepNguyen",
+    "children" : [ {
+      "name" : "1288@DiepNguyen.main(1)",
+      "children" : [ {
+        "name" : "TC_02_Login",
+        "uid" : "ef376d4fcef48129",
+        "parentUid" : "c56e13b8fbef38df0c46b208cf02c85a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1605113624077,
+          "stop" : 1605113657224,
+          "duration" : 33147
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "firefox_ui" ]
+      }, {
+        "name" : "TC_01_Register",
+        "uid" : "5dd89cc62deed642",
+        "parentUid" : "c56e13b8fbef38df0c46b208cf02c85a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1605113615578,
+          "stop" : 1605113623890,
+          "duration" : 8312
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "firefox_ui" ]
+      } ],
+      "uid" : "c56e13b8fbef38df0c46b208cf02c85a"
+    } ],
+    "uid" : "4ab1aa206cad1c80674ce31fa0b0d28a"
+  } ]
+}

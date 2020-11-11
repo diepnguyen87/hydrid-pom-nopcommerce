@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Nov 11 23:53:35 ICT 2020","Wed Nov 11 23:53:43 ICT 2020","8312","Nop Commerce - User","Run on FIREFOX UI","com.nopcommerce.users.Level_14_Register_Login_Allure_Report","com.nopcommerce.users.Level_14_Register_Login_Allure_Report","TC_01_Register","TC_01_Register","User 01 - Register to system"
+"failed","Wed Nov 11 23:53:44 ICT 2020","Wed Nov 11 23:54:17 ICT 2020","33147","Nop Commerce - User","Run on FIREFOX UI","com.nopcommerce.users.Level_14_Register_Login_Allure_Report","com.nopcommerce.users.Level_14_Register_Login_Allure_Report","TC_02_Login","TC_02_Login",""

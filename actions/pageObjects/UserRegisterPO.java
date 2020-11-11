@@ -1,7 +1,9 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
+
 import commons.AbstractPage;
+import io.qameta.allure.Step;
 import pageUIs.UserRegisterPageUI;
 
 public class UserRegisterPO extends AbstractPage{
@@ -12,16 +14,19 @@ public class UserRegisterPO extends AbstractPage{
 		this.driver = driver;
 	}
 	
+	@Step("Click to gender male radio button")
 	public void clickToGenderMaleRadioButton() {
 		waitToElementClickable(driver, UserRegisterPageUI.GENDER_MALE_RADIO);
 		clickToElement(driver, UserRegisterPageUI.GENDER_MALE_RADIO);
 	}
 
+	@Step("input to first name text box with value {0}")
 	public void inputToFirstNameTextbox(String firstName) {
 		waitToElementVisible(driver, UserRegisterPageUI.FIRSTNAME_TEXTBOX);
 		sendkeyToElement(driver, UserRegisterPageUI.FIRSTNAME_TEXTBOX, firstName);
 	}
 
+	@Step("Input to last name text box with value {0}")
 	public void inputToLastNameTextbox(String lastName) {
 		waitToElementVisible(driver, UserRegisterPageUI.LASTNAME_TEXTBOX);
 		sendkeyToElement(driver, UserRegisterPageUI.LASTNAME_TEXTBOX, lastName);

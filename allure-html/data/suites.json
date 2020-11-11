@@ -1,0 +1,43 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Nop Commerce - User",
+    "children" : [ {
+      "name" : "Run on FIREFOX UI",
+      "children" : [ {
+        "name" : "com.nopcommerce.users.Level_14_Register_Login_Allure_Report",
+        "children" : [ {
+          "name" : "TC_01_Register",
+          "uid" : "5dd89cc62deed642",
+          "parentUid" : "adddc0654a7220431633122dad17e6bd",
+          "status" : "passed",
+          "time" : {
+            "start" : 1605113615578,
+            "stop" : 1605113623890,
+            "duration" : 8312
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "firefox_ui" ]
+        }, {
+          "name" : "TC_02_Login",
+          "uid" : "ef376d4fcef48129",
+          "parentUid" : "adddc0654a7220431633122dad17e6bd",
+          "status" : "failed",
+          "time" : {
+            "start" : 1605113624077,
+            "stop" : 1605113657224,
+            "duration" : 33147
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "firefox_ui" ]
+        } ],
+        "uid" : "adddc0654a7220431633122dad17e6bd"
+      } ],
+      "uid" : "bc868c432287aa128abe59e248a8f2a4"
+    } ],
+    "uid" : "f82915c29acc098b83193dd0a2699245"
+  } ]
+}

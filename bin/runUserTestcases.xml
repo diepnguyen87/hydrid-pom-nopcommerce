@@ -3,6 +3,7 @@
 
 	<listeners>
 		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.AllureTestListener" />
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
@@ -38,17 +39,17 @@
 	<test name="Run on FIREFOX UI">
 		<parameter name="browser" value="firefox_ui"></parameter>
 		<classes>
-			<class name="com.nopcommerce.users.Level_13_Register_Login_Log_Report_HTML" />
+			<class name="com.nopcommerce.users.Level_14_Register_Login_Allure_Report" />
 		</classes>
 	</test>
 
 
-	<test name="Run on EDGE CHROMIUM">
+	<!-- <test name="Run on EDGE CHROMIUM">
 		<parameter name="browser" value="edge_chromium"></parameter>
 		<classes>
-			<class name="com.nopcommerce.users.Level_13_Register_Login_Log_Report_HTML" />
+			<class name="com.nopcommerce.users.Level_14_Register_Login_Allure_Report" />
 
 		</classes>
-	</test>
+	</test> -->
 
 </suite>

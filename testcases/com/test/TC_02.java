@@ -11,7 +11,6 @@ import commons.AbstractTest;
 public class TC_02 extends AbstractTest {
 
 	private WebDriver driver;
-	private String projectURL = System.getProperty("user.dir");
 	
 	@Parameters("browser")
 	@BeforeClass

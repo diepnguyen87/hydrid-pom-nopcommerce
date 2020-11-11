@@ -1,0 +1,35 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "User",
+    "children" : [ {
+      "name" : "TC_01_Register",
+      "uid" : "5dd89cc62deed642",
+      "parentUid" : "8af7184e28aa457354c31b2cdc2fa2fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1605113615578,
+        "stop" : 1605113623890,
+        "duration" : 8312
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox_ui" ]
+    }, {
+      "name" : "TC_02_Login",
+      "uid" : "ef376d4fcef48129",
+      "parentUid" : "8af7184e28aa457354c31b2cdc2fa2fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1605113624077,
+        "stop" : 1605113657224,
+        "duration" : 33147
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "firefox_ui" ]
+    } ],
+    "uid" : "8af7184e28aa457354c31b2cdc2fa2fe"
+  } ]
+}

@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import commons.AbstractPage;
+import io.qameta.allure.Step;
 import pageUIs.UserHomePageUI;
 
 public class UserHomePO extends AbstractPage{
@@ -12,6 +13,7 @@ public class UserHomePO extends AbstractPage{
 		this.driver = driver;
 	}
 
+	@Step("Click to register link")
 	public UserRegisterPO clickToRegisterLink() {
 		waitToElementClickable(driver, UserHomePageUI.REGISTER_LINK);
 		clickToElement(driver, UserHomePageUI.REGISTER_LINK);
@@ -40,11 +42,13 @@ public class UserHomePO extends AbstractPage{
 		return PageGeneratorManager.getUserCustomerInfoPage(driver);
 	}
 
+	@Step("Verify register link is display")
 	public boolean isRegisterLinkDisplayed() {
 		waitToElementClickable(driver, UserHomePageUI.REGISTER_LINK);
 		return isElementDisplay(driver, UserHomePageUI.REGISTER_LINK);
 	}
 
+	@Step("Verify login link is displayed")
 	public boolean isLoginLinkDisplayed() {
 		waitToElementClickable(driver, UserHomePageUI.LOGIN_LINK);
 		return isElementDisplay(driver, UserHomePageUI.LOGIN_LINK);

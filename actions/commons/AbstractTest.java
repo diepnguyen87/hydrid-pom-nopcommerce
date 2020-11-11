@@ -121,6 +121,10 @@ public class AbstractTest {
 		}
 	}
 	
+	public WebDriver getDriver() {
+		return driver;
+	}
+	
 	protected int getRandomNumber() {
 		Random random = new Random();
 		return random.nextInt(999999);
