@@ -164,8 +164,8 @@ public class AbstractPage {
 		element.sendKeys(value);
 	}
 
-	public void selectItemInDropdown(WebDriver driver, String locator, String itemValue) {
-		element = getElement(driver, locator);
+	public void selectItemInDropdown(WebDriver driver, String locator, String itemValue, String... values) {
+		element = getElement(driver, getDynamicLocator(locator, values));
 		select = new Select(element);
 		select.selectByVisibleText(itemValue);
 	}
@@ -535,4 +535,26 @@ public class AbstractPage {
 	public void overrideImplicitTimeout(WebDriver driver, long seconds) {
 		driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 	}
+	
+	public void clickToRadioButtonByID(WebDriver driver, String radioButtonID) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
+	}
+	
+	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
+		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, value, textboxID);
+		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, value, textboxID);
+	}
+	
+	public void clickToButtonByValue(WebDriver driver, String buttonValue) {
+		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
+	}
+	
+	public void selectDropdownByName(WebDriver driver, String dropdownName, String itemValue) {
+		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownName);
+		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownName);
+	}
+	
+		
 }

@@ -39,7 +39,7 @@
 	<test name="Run on FIREFOX UI">
 		<parameter name="browser" value="firefox_ui"></parameter>
 		<classes>
-			<class name="com.nopcommerce.users.Level_14_Register_Login_Allure_Report" />
+			<class name="com.nopcommerce.users.Level_16_Register_Login_Close_Browser" />
 		</classes>
 	</test>
 
@@ -48,7 +48,6 @@
 		<parameter name="browser" value="edge_chromium"></parameter>
 		<classes>
 			<class name="com.nopcommerce.users.Level_14_Register_Login_Allure_Report" />
-
 		</classes>
 	</test> -->
 

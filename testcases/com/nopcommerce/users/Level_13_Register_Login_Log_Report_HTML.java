@@ -62,13 +62,13 @@ public class Level_13_Register_Login_Log_Report_HTML extends AbstractTest {
 		registerPage.inputToLastNameTextbox(lastName);
 
 		log.info("Register - Step 08: select day dropdown list");
-		registerPage.selectDayDropdown("18");
+		registerPage.selectDayDropdown(day);
 		
 		log.info("Register - Step 09: select month dropdown list");
-		registerPage.selectMonthDropdown("August");
+		registerPage.selectMonthDropdown(month);
 		
 		log.info("Register - Step 10: select year dropdown list");
-		registerPage.selectYearDropdown("1958");
+		registerPage.selectYearDropdown(year);
 
 		log.info("Register - Step 11: input to email text box with value: " + email);
 		registerPage.inputToEmailTextbox(email);

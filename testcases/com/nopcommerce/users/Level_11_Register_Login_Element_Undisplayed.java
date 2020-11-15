@@ -7,14 +7,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.AbstractTest;
-import pageObjects.UserLoginPO;
-import pageObjects.UserOrdersHistoryPO;
-import pageObjects.UserRegisterPO;
 import pageObjects.PageGeneratorManager;
-import pageObjects.UserCustomerAddressesPO;
-import pageObjects.UserCustomerInfoPO;
-import pageObjects.UserCustomerProductReviewsPO;
 import pageObjects.UserHomePO;
+import pageObjects.UserLoginPO;
+import pageObjects.UserRegisterPO;
 
 public class Level_11_Register_Login_Element_Undisplayed extends AbstractTest {
 
@@ -24,10 +20,6 @@ public class Level_11_Register_Login_Element_Undisplayed extends AbstractTest {
 	private UserHomePO homePage;
 	private UserLoginPO loginPage;
 	private UserRegisterPO registerPage;
-	private UserCustomerInfoPO customerInfoPage;
-	private UserCustomerAddressesPO addressesPage;
-	private UserOrdersHistoryPO ordersHistoryPage;
-	private UserCustomerProductReviewsPO myProductReviewsPage;
 
 	@Parameters("browser")
 	@BeforeClass
@@ -59,9 +51,9 @@ public class Level_11_Register_Login_Element_Undisplayed extends AbstractTest {
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
 
-		registerPage.selectDayDropdown("18");
-		registerPage.selectMonthDropdown("August");
-		registerPage.selectYearDropdown("1958");
+		registerPage.selectDayDropdown(day);
+		registerPage.selectMonthDropdown(month);
+		registerPage.selectYearDropdown(year);
 
 		registerPage.inputToEmailTextbox(email);
 		registerPage.inputToCompanyTextbox(company);

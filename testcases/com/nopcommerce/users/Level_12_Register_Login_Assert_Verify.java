@@ -54,9 +54,9 @@ public class Level_12_Register_Login_Assert_Verify extends AbstractTest {
 		registerPage.inputToFirstNameTextbox(firstName);
 		registerPage.inputToLastNameTextbox(lastName);
 
-		registerPage.selectDayDropdown("18");
-		registerPage.selectMonthDropdown("August");
-		registerPage.selectYearDropdown("1958");
+		registerPage.selectDayDropdown(day);
+		registerPage.selectMonthDropdown(month);
+		registerPage.selectYearDropdown(year);
 
 		registerPage.inputToEmailTextbox(email);
 		registerPage.inputToCompanyTextbox(company);

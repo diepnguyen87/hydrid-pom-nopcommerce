@@ -19,5 +19,12 @@ public class AbstractPageUI {
 	public static final String COLUMN_NAME_BY_PANEL_ID = "//div[@id='%s']//th[text()='%s']/preceding-sibling::th";
 	public static final String CELL_BY_PANEL_ID = "//div[@id='%s']//tr[%s]/td[%s]";
 	public static final String PICTURE_PANEL_DETAIL = "//a[contains(@href,'%s')]/parent::td/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']/following-sibling::td[text()='%s']";
+	
+	
+	public static final String DYNAMIC_RADIO_BUTTON_BY_ID = "//input[@id='%s']";
+	public static final String DYNAMIC_TEXT_BOX_BY_ID = "//input[@id='%s']";
+	public static final String DYNAMIC_BUTTON_BY_VALUE = "//input[@value='%s']";
+	public static final String DYNAMIC_DROPDOWN_BY_NAME = "//select[@name='%s']";
+	
 
 }

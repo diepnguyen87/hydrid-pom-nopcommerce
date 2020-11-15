@@ -16,7 +16,7 @@ import pageObjects.UserLoginPO;
 import pageObjects.UserRegisterPO;
 
 @Feature("User")
-public class Level_14_Register_Login_Allure_Report extends AbstractTest {
+public class Level_17_Register_Login_Pattern_Object extends AbstractTest {
 
 	private WebDriver driver;
 	private String firstName, lastName, email, company, password, confirmPassword, day, month, year;

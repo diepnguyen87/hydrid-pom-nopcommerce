@@ -706,3 +706,36 @@
 2020-11-12 00:39:11,680 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
 2020-11-12 00:39:11,682 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 08: verify login link undisplayed
 2020-11-12 00:39:31,916 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- FAILED -------------------------- 
+2020-11-15 09:19:36,700 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_I_Search - Precondition - Step 01: click to login link
+2020-11-15 09:19:38,275 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_I_Search - Precondition - Step 02: input to email text box with value: Van.Tran559880@gmail.com
+2020-11-15 09:19:38,460 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_I_Search - Precondition - Step 03: input to password text box with value: 123?Abcd
+2020-11-15 09:19:38,581 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_I_Search - Precondition - Step 04: click to login link
+2020-11-15 09:19:40,176 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_I_Search - Login - Step 05: verify my account link displayed
+2020-11-15 09:19:40,351 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_I_Search -  -------------------------- PASSED -------------------------- 
+2020-11-15 09:19:48,544 INFO  com.nopcommerce.users.Level_16_Register_Login_Share_State_Part_II_Sort - Precondition - Step 01: click to login link
+2020-11-15 09:19:49,947 INFO  com.nopcommerce.users.Level_16_Register_Login_Share_State_Part_II_Sort - Precondition - Step 02: input to email text box with value: Van.Tran559880@gmail.com
+2020-11-15 09:19:50,113 INFO  com.nopcommerce.users.Level_16_Register_Login_Share_State_Part_II_Sort - Precondition - Step 03: input to password text box with value: 123?Abcd
+2020-11-15 09:19:50,264 INFO  com.nopcommerce.users.Level_16_Register_Login_Share_State_Part_II_Sort - Precondition - Step 04: click to login link
+2020-11-15 09:19:52,910 INFO  com.nopcommerce.users.Level_16_Register_Login_Share_State_Part_II_Sort - Login - Step 05: verify my account link displayed
+2020-11-15 09:19:53,079 INFO  com.nopcommerce.users.Level_16_Register_Login_Share_State_Part_II_Sort -  -------------------------- PASSED -------------------------- 
+2020-11-15 09:53:29,195 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_III_Cookie - Login - Step 01: login by cookie
+2020-11-15 09:53:31,226 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_III_Cookie - Login - Step 05: verify my account link displayed
+2020-11-15 20:34:34,734 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_III_Cookie - Login - Step 01: login by cookie
+2020-11-15 20:34:36,780 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_III_Cookie - Login - Step 02: verify my account link displayed
+2020-11-15 20:40:31,654 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_III_Cookie - Login - Step 01: login by cookie
+2020-11-15 20:40:33,910 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_III_Cookie - Login - Step 02: verify my account link displayed
+2020-11-15 20:40:34,031 INFO  com.nopcommerce.users.Level_15_Register_Login_Share_State_Part_III_Cookie -  -------------------------- PASSED -------------------------- 
+2020-11-15 21:10:45,613 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - Login - Step 01: login by cookie
+2020-11-15 21:10:47,961 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - Login - Step 02: verify my account link displayed
+2020-11-15 21:10:48,137 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser -  -------------------------- PASSED -------------------------- 
+2020-11-15 21:14:18,903 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - Login - Step 01: login by cookie
+2020-11-15 21:14:19,341 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - OS name = windows 10
+2020-11-15 21:14:19,968 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DIEPNGUYEN', ip: '100.77.224.219', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 81.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201012085804, moz:geckodriverVersion: 0.27.0, moz:headless: false, moz:processID: 12728, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4312950e-cf9e-4bf1-8872-9fc23f048433
+2020-11-15 21:17:01,074 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - Login - Step 01: login by cookie
+2020-11-15 21:17:01,417 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - OS name = windows 10
+2020-11-15 21:17:02,686 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - ---------- QUIT BROWSER SUCCESS ----------

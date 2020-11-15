@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-2020-11-12 00:38:50,290 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 01: Open home page
-2020-11-12 00:38:50,296 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 01: verify register link displayed
-2020-11-12 00:38:50,725 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
-2020-11-12 00:38:50,731 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 03: verify login link displayed
-2020-11-12 00:38:50,876 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
-2020-11-12 00:38:50,877 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 04: Click to register link at home page
-2020-11-12 00:38:52,526 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 05: Click to gender mal radio button
-2020-11-12 00:38:52,870 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 06: input first name text box with value: Van
-2020-11-12 00:38:52,990 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 07: input last name text box with value: Tran
-2020-11-12 00:38:53,106 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 08: select day dropdown list
-2020-11-12 00:38:53,550 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 09: select month dropdown list
-2020-11-12 00:38:54,025 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 10: select year dropdown list
-2020-11-12 00:38:54,418 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 11: input to email text box with value: Van.Tran918022@gmail.com
-2020-11-12 00:38:54,578 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 12: input to company name text box with value: KITS
-2020-11-12 00:38:54,741 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 13: input to password text box with value: 123?Abcd
-2020-11-12 00:38:54,906 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 14: input to confirm password text box with value: 123?Abcd
-2020-11-12 00:38:55,028 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 15: click to register link
-2020-11-12 00:38:56,886 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 16: verify success message displayed
-2020-11-12 00:38:56,985 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
-2020-11-12 00:38:56,987 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Register - Step 17: click to logout link
-2020-11-12 00:38:58,784 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 01: click to login link
-2020-11-12 00:39:00,076 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 02: input to email text box with value: Van.Tran918022@gmail.com
-2020-11-12 00:39:00,242 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 03: input to password text box with value: 123?Abcd
-2020-11-12 00:39:00,369 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 04: click to login link
-2020-11-12 00:39:01,315 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 05: verify my account link displayed
-2020-11-12 00:39:01,437 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
-2020-11-12 00:39:01,438 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 06: verify logout link display
-2020-11-12 00:39:01,530 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
-2020-11-12 00:39:01,530 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 07: verify register link undisplayed
-2020-11-12 00:39:11,680 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- PASSED -------------------------- 
-2020-11-12 00:39:11,682 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report - Login - Step 08: verify login link undisplayed
-2020-11-12 00:39:31,916 INFO  com.nopcommerce.users.Level_14_Register_Login_Allure_Report -  -------------------------- FAILED -------------------------- 
-=======
->>>>>>> branch 'master' of https://github.com/diepnguyen87/hydrid-pom-nopcommerce
+2020-11-15 21:17:01,074 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - Login - Step 01: login by cookie
+2020-11-15 21:17:01,417 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - OS name = windows 10
+2020-11-15 21:17:02,686 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - ---------- QUIT BROWSER SUCCESS ----------
