@@ -317,4 +317,5 @@ public class AbstractPage {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(element));
 	}
+	
 }

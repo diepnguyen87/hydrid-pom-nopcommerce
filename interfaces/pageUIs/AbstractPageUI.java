@@ -25,6 +25,6 @@ public class AbstractPageUI {
 	public static final String DYNAMIC_TEXT_BOX_BY_ID = "//input[@id='%s']";
 	public static final String DYNAMIC_BUTTON_BY_VALUE = "//input[@value='%s']";
 	public static final String DYNAMIC_DROPDOWN_BY_NAME = "//select[@name='%s']";
-	
+	public static final String DYNAMIC_ERROR_MSG_BY_ID = "//span[@class='field-validation-error']/span[@id='%s-error']";
 
 }

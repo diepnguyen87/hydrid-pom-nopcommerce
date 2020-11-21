@@ -542,7 +542,7 @@ public class AbstractPage {
 	}
 	
 	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
-		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, value, textboxID);
+		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, textboxID);
 		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, value, textboxID);
 	}
 	
@@ -556,5 +556,8 @@ public class AbstractPage {
 		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownName);
 	}
 	
-		
+	public String getErrorMessageAtMandantoryFieldByID(WebDriver driver, String fieldID) {
+		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
+		return getElementText(driver, AbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
+	}
 }

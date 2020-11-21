@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="libExtentV3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libExtentV3/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/testng-6.9.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/mongodb-driver-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/bsh-2.0b4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/bson-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/freemarker-2.3.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/jsoup-1.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/httpmime-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/jcommander-1.48.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/httpclient-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/mongodb-driver-core-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/extentreports-3.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/httpcore-4.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libExtentV3/gson-2.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

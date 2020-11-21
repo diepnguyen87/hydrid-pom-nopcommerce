@@ -39,7 +39,7 @@
 	<test name="Run on FIREFOX UI">
 		<parameter name="browser" value="firefox_ui"></parameter>
 		<classes>
-			<class name="com.nopcommerce.users.Level_16_Register_Login_Close_Browser" />
+			<class name="com.nopcommerce.users.Level_17_Register_Login_Pattern_Object" />
 		</classes>
 	</test>
 

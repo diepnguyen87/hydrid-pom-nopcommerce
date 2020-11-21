@@ -43,103 +43,112 @@ public class Level_17_Register_Login_Pattern_Object extends AbstractTest {
 		year = "1958";
 	}
 
-	@Description("User 01 - Register to system")
-	@Severity(SeverityLevel.NORMAL)
 	@Test
-	public void TC_01_Register() {
+	public void TC_01_Validate_At_Register_Form() {
 		log.info("Register - Step 01: Open home page");
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		
-		log.info("Register - Step 01: verify register link displayed");
-		verifyTrue(homePage.isRegisterLinkDisplayed());
-		
-		log.info("Register - Step 03: verify login link displayed");
-		verifyTrue(homePage.isLoginLinkDisplayed());
-		
-		log.info("Register - Step 04: Click to register link at home page");
+		log.info("Register - Step 02: Click to register link at home page");
 		registerPage = homePage.clickToRegisterLink();
+		
+		log.info("Register - Step 03: Click to register button");
+		registerPage.clickToButtonByValue(driver, "Register");
+		
+		log.info("Register - Step 04: Verify error message display at firstName textbox");
+		verifyEquals(registerPage.getErrorMessageAtMandantoryFieldByID(driver, "FirstName"), "First name is required.");
+		
+		log.info("Register - Step 05: Verify error message display at lastName textbox");
+		verifyEquals(registerPage.getErrorMessageAtMandantoryFieldByID(driver, "LastName"), "Last name is required.");
+		
+		log.info("Register - Step 06: Verify error message display at email textbox");
+		verifyEquals(registerPage.getErrorMessageAtMandantoryFieldByID(driver, "Email"), "Email is required.");
+		
+		log.info("Register - Step 07: Verify error message display at password textbox");
+		verifyEquals(registerPage.getErrorMessageAtMandantoryFieldByID(driver, "Password"), "Password is required.");
+		
+		log.info("Register - Step 08: Verify error message display at confirmPassword textbox");
+		verifyEquals(registerPage.getErrorMessageAtMandantoryFieldByID(driver, "ConfirmPassword"), "Password is required.");
+		
+		log.info("Register - Step 09: Verify error message display at confirmPassword textbox");
+		verifyEquals(registerPage.getErrorMessageAtMandantoryFieldByID(driver, "ConfirmPassword"), "Email is required.");
+		
+	}
+	
+	@Test
+	public void TC_02_Register_Success() {
+		log.info("Register - Step 01: refresh to regiter page");
+		registerPage.refreshCurrentpage(driver);
 
-		log.info("Register - Step 05: Click to gender mal radio button");
-		registerPage.clickToGenderMaleRadioButton();
+		log.info("Register - Step 02: Click to gender male radio button");
+		registerPage.clickToRadioButtonByID(driver, "gender-male");
 		
-		log.info("Register - Step 06: input first name text box with value: " + firstName);
-		registerPage.inputToFirstNameTextbox(firstName);
+		log.info("Register - Step 03: input first name text box with value: " + firstName);
+		registerPage.inputToTextboxByID(driver, "FirstName", firstName);
 		
-		log.info("Register - Step 07: input last name text box with value: " + lastName);
-		registerPage.inputToLastNameTextbox(lastName);
+		log.info("Register - Step 04: input last name text box with value: " + lastName);
+		registerPage.inputToTextboxByID(driver, "LastName", lastName);
 
-		log.info("Register - Step 08: select day dropdown list");
-		registerPage.selectDayDropdown(day);
+		log.info("Register - Step 05: select day dropdown list");
+		registerPage.selectDropdownByName(driver, "DateOfBirthDay", day);
 		
-		log.info("Register - Step 09: select month dropdown list");
-		registerPage.selectMonthDropdown(month);
+		log.info("Register - Step 06: select month dropdown list");
+		registerPage.selectDropdownByName(driver, "DateOfBirthMonth", month);
 		
-		log.info("Register - Step 10: select year dropdown list");
-		registerPage.selectYearDropdown(year);
+		log.info("Register - Step 07: select year dropdown list");
+		registerPage.selectDropdownByName(driver, "DateOfBirthYear", year);
 
-		log.info("Register - Step 11: input to email text box with value: " + email);
-		registerPage.inputToEmailTextbox(email);
+		log.info("Register - Step 08: input to email text box with value: " + email);
+		registerPage.inputToTextboxByID(driver, "Email", email);
 		
-		log.info("Register - Step 12: input to company name text box with value: " + company);
-		registerPage.inputToCompanyTextbox(company);
+		log.info("Register - Step 09: input to company name text box with value: " + company);
+		registerPage.inputToTextboxByID(driver, "Company", company);
 		
-		log.info("Register - Step 13: input to password text box with value: " + password);
-		registerPage.inputToPasswordTextbox(password);
+		log.info("Register - Step 10: input to password text box with value: " + password);
+		registerPage.inputToTextboxByID(driver, "Password", password);
 		
-		log.info("Register - Step 14: input to confirm password text box with value: " + confirmPassword);
-		registerPage.inputToConfirmPasswordTextbox(confirmPassword);
+		log.info("Register - Step 11: input to confirm password text box with value: " + confirmPassword);
+		registerPage.inputToTextboxByID(driver, "ConfirmPassword", password);
 
-		log.info("Register - Step 15: click to register link");
-		registerPage.clickToRegisterLink();
+		log.info("Register - Step 12: click to register link");
+		registerPage.clickToButtonByValue(driver, "Register");
 		//Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		
-		log.info("Register - Step 16: verify success message displayed");
+		log.info("Register - Step 13: verify success message displayed");
 		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		
-		log.info("Register - Step 17: click to logout link");
+		log.info("Register - Step 14: click to logout link");
 		homePage = registerPage.clickToLogoutLink();
 	}
 
 	@Test
-	public void TC_02_Login() {
+	public void TC_03_Login_Success() {
 		log.info("Login - Step 01: click to login link");
 		loginPage = homePage.clickToLoginLink();
 
 		log.info("Login - Step 02: input to email text box with value: " + email);
-		loginPage.inputToEmailTextbox(email);
+		loginPage.inputToTextboxByID(driver, "Email", email);
 		
 		log.info("Login - Step 03: input to password text box with value: " + password);
-		loginPage.inputToPasswordTextbox(password);
+		loginPage.inputToTextboxByID(driver, "Password", password);
 		
 		log.info("Login - Step 04: click to login link");
-		homePage = loginPage.clickToLoginButton();
-
-		/*
-		 * Assert.assertTrue(homePage.isMyAccountLinkDisplayed()); Assert.assertTrue(homePage.isLogoutLinkDisplayed());
-		 * 
-		 * Assert.assertTrue(homePage.isRegisterLinkUndisplayed()); Assert.asserlog.info("Login - Step 05: verify my account link displayed");
-		verifyTrue(homePage.isMyAccountLinkDisplayed());tTrue(homePage.isLoginLinkUndisplayed());
-		 */
+		loginPage.clickToButtonByValue(driver, "Log in");
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		
-		
-		
-		log.info("Login - Step 06: verify logout link display");
+		log.info("Login - Step 05: verify logout link display");
 		verifyTrue(homePage.isLogoutLinkDisplayed());
 		
-		log.info("Login - Step 07: verify register link undisplayed");
+		log.info("Login - Step 06: verify register link undisplayed");
 		verifyTrue(homePage.isRegisterLinkUndisplayed());
 		
-		log.info("Login - Step 08: verify login link undisplayed");
-		
-		boolean result = homePage.isLoginLinkUndisplayed();
-		System.out.println("check lai: " + result);
-		verifyFalse(homePage.isLoginLinkUndisplayed());
+		log.info("Login - Step 07: verify login link undisplayed");
+		verifyTrue(homePage.isLoginLinkUndisplayed());
 	}
 
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void afterClass() {
-		driver.close();
+		closeBrowserAndDriver(driver);
 	}
 
 }
