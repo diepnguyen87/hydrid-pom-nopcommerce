@@ -739,3 +739,165 @@ Session ID: 4312950e-cf9e-4bf1-8872-9fc23f048433
 2020-11-15 21:17:01,074 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - Login - Step 01: login by cookie
 2020-11-15 21:17:01,417 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - OS name = windows 10
 2020-11-15 21:17:02,686 INFO  com.nopcommerce.users.Level_16_Register_Login_Close_Browser - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-21 21:01:47,119 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: Open home page
+2020-11-21 21:01:47,163 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to register link at home page
+2020-11-21 21:01:49,030 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: Click to gender mal radio button
+2020-11-21 21:01:49,393 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: input first name text box with value: Van
+2020-11-21 21:02:19,869 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 01: click to login link
+2020-11-21 21:02:21,260 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 02: input to email text box with value: Van.Tran275613@gmail.com
+2020-11-21 21:02:51,423 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:02:52,407 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-21 21:10:57,536 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:10:57,544 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - 
+2020-11-21 21:11:24,562 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: Open home page
+2020-11-21 21:11:24,572 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to register link at home page
+2020-11-21 21:11:26,821 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: Click to gender male radio button
+2020-11-21 21:11:27,168 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: input first name text box with value: Van
+2020-11-21 21:11:57,432 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 01: click to login link
+2020-11-21 21:11:58,114 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 02: input to email text box with value: Van.Tran727160@gmail.com
+2020-11-21 21:12:28,280 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:12:29,343 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-21 21:13:21,898 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: Open home page
+2020-11-21 21:13:21,905 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to register link at home page
+2020-11-21 21:13:23,540 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: Click to gender male radio button
+2020-11-21 21:13:23,888 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: input first name text box with value: Van
+2020-11-21 21:13:24,057 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 05: input last name text box with value: Tran
+2020-11-21 21:13:24,220 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 06: select day dropdown list
+2020-11-21 21:13:24,606 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 07: select month dropdown list
+2020-11-21 21:13:24,938 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 8: select year dropdown list
+2020-11-21 21:13:25,312 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 9: input to email text box with value: Van.Tran52371@gmail.com
+2020-11-21 21:13:25,464 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 10: input to company name text box with value: KITS
+2020-11-21 21:13:25,592 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 11: input to password text box with value: 123?Abcd
+2020-11-21 21:13:25,708 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 12: input to confirm password text box with value: 123?Abcd
+2020-11-21 21:13:25,846 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 13: click to register link
+2020-11-21 21:13:27,928 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 14: verify success message displayed
+2020-11-21 21:13:28,013 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:13:28,013 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 15: click to logout link
+2020-11-21 21:13:30,471 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 01: click to login link
+2020-11-21 21:13:31,089 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 02: input to email text box with value: Van.Tran52371@gmail.com
+2020-11-21 21:13:31,236 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 03: input to password text box with value: 123?Abcd
+2020-11-21 21:13:31,368 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 04: click to login link
+2020-11-21 21:13:33,898 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 06: verify logout link display
+2020-11-21 21:13:34,045 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:13:34,045 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 07: verify register link undisplayed
+2020-11-21 21:13:44,179 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:13:44,179 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 08: verify login link undisplayed
+2020-11-21 21:14:04,386 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- FAILED -------------------------- 
+2020-11-21 21:14:04,707 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:14:06,172 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-21 21:33:05,713 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: Open home page
+2020-11-21 21:33:05,716 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to register link at home page
+2020-11-21 21:33:07,746 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: Click to gender male radio button
+2020-11-21 21:33:08,163 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: input first name text box with value: Van
+2020-11-21 21:33:08,383 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 05: input last name text box with value: Tran
+2020-11-21 21:33:08,537 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 06: select day dropdown list
+2020-11-21 21:33:08,932 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 07: select month dropdown list
+2020-11-21 21:33:09,282 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 8: select year dropdown list
+2020-11-21 21:33:09,610 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 9: input to email text box with value: Van.Tran285611@gmail.com
+2020-11-21 21:33:09,751 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 10: input to company name text box with value: KITS
+2020-11-21 21:33:09,868 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 11: input to password text box with value: 123?Abcd
+2020-11-21 21:33:09,976 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 12: input to confirm password text box with value: 123?Abcd
+2020-11-21 21:33:10,089 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 13: click to register link
+2020-11-21 21:33:11,707 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 14: verify success message displayed
+2020-11-21 21:33:11,823 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:33:11,823 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 15: click to logout link
+2020-11-21 21:33:14,563 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 01: click to login link
+2020-11-21 21:33:16,015 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 02: input to email text box with value: Van.Tran285611@gmail.com
+2020-11-21 21:33:16,201 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 03: input to password text box with value: 123?Abcd
+2020-11-21 21:33:16,328 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 04: click to login link
+2020-11-21 21:33:18,260 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 06: verify logout link display
+2020-11-21 21:33:18,439 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:33:18,440 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 07: verify register link undisplayed
+2020-11-21 21:33:28,573 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:33:28,573 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 08: verify login link undisplayed
+2020-11-21 21:33:48,797 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- FAILED -------------------------- 
+2020-11-21 21:33:49,116 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:33:50,426 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-21 21:39:23,076 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: refresh to regiter page
+2020-11-21 21:39:23,570 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 01: click to login link
+2020-11-21 21:39:23,786 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:39:25,120 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-21 21:40:29,802 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: Open home page
+2020-11-21 21:40:29,807 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to register link at home page
+2020-11-21 21:40:31,641 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: Click to register button
+2020-11-21 21:40:32,035 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: Verify error message display at firstName textbox
+2020-11-21 21:40:32,157 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:32,158 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 05: Verify error message display at lastName textbox
+2020-11-21 21:40:32,268 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:32,268 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 06: Verify error message display at email textbox
+2020-11-21 21:40:32,370 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:32,370 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 07: Verify error message display at password textbox
+2020-11-21 21:40:32,456 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:32,457 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 08: Verify error message display at confirmPassword textbox
+2020-11-21 21:40:32,535 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:32,535 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 09: Verify error message display at confirmPassword textbox
+2020-11-21 21:40:32,608 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- FAILED -------------------------- 
+2020-11-21 21:40:33,010 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: refresh to regiter page
+2020-11-21 21:40:34,917 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to gender male radio button
+2020-11-21 21:40:35,272 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: input first name text box with value: Van
+2020-11-21 21:40:35,402 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: input last name text box with value: Tran
+2020-11-21 21:40:35,515 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 05: select day dropdown list
+2020-11-21 21:40:35,867 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 06: select month dropdown list
+2020-11-21 21:40:36,213 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 07: select year dropdown list
+2020-11-21 21:40:36,575 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 08: input to email text box with value: Van.Tran215134@gmail.com
+2020-11-21 21:40:36,710 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 09: input to company name text box with value: KITS
+2020-11-21 21:40:36,845 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 10: input to password text box with value: 123?Abcd
+2020-11-21 21:40:36,958 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 11: input to confirm password text box with value: 123?Abcd
+2020-11-21 21:40:37,074 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 12: click to register link
+2020-11-21 21:40:39,356 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 13: verify success message displayed
+2020-11-21 21:40:39,467 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:39,468 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 14: click to logout link
+2020-11-21 21:40:41,890 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 01: click to login link
+2020-11-21 21:40:42,647 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 02: input to email text box with value: Van.Tran215134@gmail.com
+2020-11-21 21:40:42,815 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 03: input to password text box with value: 123?Abcd
+2020-11-21 21:40:42,935 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 04: click to login link
+2020-11-21 21:40:43,963 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 05: verify logout link display
+2020-11-21 21:40:44,111 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:44,111 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 06: verify register link undisplayed
+2020-11-21 21:40:54,243 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:40:54,243 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 07: verify login link undisplayed
+2020-11-21 21:41:14,469 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- FAILED -------------------------- 
+2020-11-21 21:41:14,755 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:41:16,088 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - ---------- QUIT BROWSER SUCCESS ----------
+2020-11-21 21:43:40,547 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: Open home page
+2020-11-21 21:43:40,551 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to register link at home page
+2020-11-21 21:43:42,296 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: Click to register button
+2020-11-21 21:43:42,677 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: Verify error message display at firstName textbox
+2020-11-21 21:43:42,762 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:43:42,762 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 05: Verify error message display at lastName textbox
+2020-11-21 21:43:42,854 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:43:42,854 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 06: Verify error message display at email textbox
+2020-11-21 21:43:42,926 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:43:42,926 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 07: Verify error message display at password textbox
+2020-11-21 21:43:43,007 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:43:43,007 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 08: Verify error message display at confirmPassword textbox
+2020-11-21 21:43:43,079 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:43:43,079 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 09: Verify error message display at confirmPassword textbox
+2020-11-21 21:43:43,151 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- FAILED -------------------------- 
+2020-11-21 21:43:43,407 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 01: refresh to regiter page
+2020-11-21 21:43:45,273 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 02: Click to gender male radio button
+2020-11-21 21:43:45,658 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 03: input first name text box with value: Van
+2020-11-21 21:43:45,767 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 04: input last name text box with value: Tran
+2020-11-21 21:43:45,902 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 05: select day dropdown list
+2020-11-21 21:43:46,248 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 06: select month dropdown list
+2020-11-21 21:43:46,571 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 07: select year dropdown list
+2020-11-21 21:43:46,899 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 08: input to email text box with value: Van.Tran941197@gmail.com
+2020-11-21 21:43:47,036 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 09: input to company name text box with value: KITS
+2020-11-21 21:43:47,191 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 10: input to password text box with value: 123?Abcd
+2020-11-21 21:43:47,325 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 11: input to confirm password text box with value: 123?Abcd
+2020-11-21 21:43:47,495 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 12: click to register link
+2020-11-21 21:43:49,180 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 13: verify success message displayed
+2020-11-21 21:43:49,281 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:43:49,281 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Register - Step 14: click to logout link
+2020-11-21 21:43:51,083 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 01: click to login link
+2020-11-21 21:43:51,772 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 02: input to email text box with value: Van.Tran941197@gmail.com
+2020-11-21 21:43:51,924 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 03: input to password text box with value: 123?Abcd
+2020-11-21 21:43:52,090 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 04: click to login link
+2020-11-21 21:43:53,311 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 05: verify logout link display
+2020-11-21 21:43:53,460 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:43:53,461 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 06: verify register link undisplayed
+2020-11-21 21:44:03,572 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:44:03,573 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - Login - Step 07: verify login link undisplayed
+2020-11-21 21:44:13,689 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object -  -------------------------- PASSED -------------------------- 
+2020-11-21 21:44:13,694 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - OS name = windows 10
+2020-11-21 21:44:14,970 INFO  com.nopcommerce.users.Level_17_Register_Login_Pattern_Object - ---------- QUIT BROWSER SUCCESS ----------
