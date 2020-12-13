@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 import com.nopcommerce.common.Common_01_Register;
 import commons.AbstractTest;
 import io.qameta.allure.Feature;
-import pageObjects.PageGeneratorManager;
-import pageObjects.UserHomePO;
-import pageObjects.UserLoginPO;
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.UserHomePO;
+import pageObjects.nopcommerce.UserLoginPO;
 
 @Feature("User")
 public class Level_15_Register_Login_Share_State_Part_II_Sort extends AbstractTest {

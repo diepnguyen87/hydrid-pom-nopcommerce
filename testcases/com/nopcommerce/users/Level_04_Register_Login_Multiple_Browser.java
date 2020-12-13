@@ -7,10 +7,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.AbstractTest;
-import pageObjects.UserLoginPO;
-import pageObjects.UserRegisterPO;
-import pageObjects.UserCustomerInfoPO;
-import pageObjects.UserHomePO;
+import pageObjects.nopcommerce.UserCustomerInfoPO;
+import pageObjects.nopcommerce.UserHomePO;
+import pageObjects.nopcommerce.UserLoginPO;
+import pageObjects.nopcommerce.UserRegisterPO;
 
 public class Level_04_Register_Login_Multiple_Browser extends AbstractTest {
 

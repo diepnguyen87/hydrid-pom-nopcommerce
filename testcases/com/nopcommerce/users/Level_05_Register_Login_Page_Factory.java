@@ -8,10 +8,10 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
-import pageObjects.UserCustomerInfoPO;
-import pageObjects.UserHomePO;
-import pageObjects.UserLoginPO;
-import pageObjects.UserRegisterPO;
+import pageObjects.nopcommerce.UserCustomerInfoPO;
+import pageObjects.nopcommerce.UserHomePO;
+import pageObjects.nopcommerce.UserLoginPO;
+import pageObjects.nopcommerce.UserRegisterPO;
 
 public class Level_05_Register_Login_Page_Factory extends AbstractTest {
 

@@ -10,10 +10,10 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import pageObjects.PageGeneratorManager;
-import pageObjects.UserHomePO;
-import pageObjects.UserLoginPO;
-import pageObjects.UserRegisterPO;
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.UserHomePO;
+import pageObjects.nopcommerce.UserLoginPO;
+import pageObjects.nopcommerce.UserRegisterPO;
 
 @Feature("User")
 public class Level_14_Register_Login_Allure_Report extends AbstractTest {

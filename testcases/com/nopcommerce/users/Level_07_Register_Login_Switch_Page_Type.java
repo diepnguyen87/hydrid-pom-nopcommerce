@@ -7,14 +7,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.AbstractTest;
-import pageObjects.UserLoginPO;
-import pageObjects.UserOrdersHistoryPO;
-import pageObjects.UserRegisterPO;
-import pageObjects.PageGeneratorManager;
-import pageObjects.UserCustomerAddressesPO;
-import pageObjects.UserCustomerInfoPO;
-import pageObjects.UserCustomerProductReviewsPO;
-import pageObjects.UserHomePO;
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.UserCustomerAddressesPO;
+import pageObjects.nopcommerce.UserCustomerInfoPO;
+import pageObjects.nopcommerce.UserCustomerProductReviewsPO;
+import pageObjects.nopcommerce.UserHomePO;
+import pageObjects.nopcommerce.UserLoginPO;
+import pageObjects.nopcommerce.UserOrdersHistoryPO;
+import pageObjects.nopcommerce.UserRegisterPO;
 
 public class Level_07_Register_Login_Switch_Page_Type extends AbstractTest {
 

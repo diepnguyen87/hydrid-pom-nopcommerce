@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import commons.AbstractTest;
-import pageObjects.PageGeneratorManager;
-import pageObjects.UserHomePO;
-import pageObjects.UserRegisterPO;
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.UserHomePO;
+import pageObjects.nopcommerce.UserRegisterPO;
 
 public class Common_02_Cookie extends AbstractTest {
 

@@ -7,11 +7,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import commons.AbstractTest;
-import pageObjects.UserLoginPO;
-import pageObjects.UserRegisterPO;
-import pageObjects.PageGeneratorManager;
-import pageObjects.UserCustomerInfoPO;
-import pageObjects.UserHomePO;
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.UserCustomerInfoPO;
+import pageObjects.nopcommerce.UserHomePO;
+import pageObjects.nopcommerce.UserLoginPO;
+import pageObjects.nopcommerce.UserRegisterPO;
 
 public class Level_06_Register_Login_Page_Generator_Manager extends AbstractTest {
 

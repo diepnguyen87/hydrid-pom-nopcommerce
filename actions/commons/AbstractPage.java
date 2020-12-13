@@ -13,13 +13,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.PageGeneratorManager;
-import pageObjects.UserCustomerAddressesPO;
-import pageObjects.UserCustomerInfoPO;
-import pageObjects.UserCustomerProductReviewsPO;
-import pageObjects.UserOrdersHistoryPO;
-import pageUIs.AbstractPageUI;
-import pageUIs.AdminProductPageUI;
+
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.UserCustomerAddressesPO;
+import pageObjects.nopcommerce.UserCustomerInfoPO;
+import pageObjects.nopcommerce.UserCustomerProductReviewsPO;
+import pageObjects.nopcommerce.UserOrdersHistoryPO;
+import pageUIs.nopcommerce.AbstractPageUI;
 
 public class AbstractPage {
 
@@ -318,9 +318,9 @@ public class AbstractPage {
 		action.contextClick(getElement(driver, locator)).perform();
 	}
 
-	public void hoverMouseToElement(WebDriver driver, String locator) {
+	public void hoverMouseToElement(WebDriver driver, String locator, String... values) {
 		action = new Actions(driver);
-		action.moveToElement(getElement(driver, locator)).perform();
+		action.moveToElement(getElement(driver, getDynamicLocator(locator, values))).perform();
 	}
 
 	public void clickAndHoldToElement(WebDriver driver, String locator) {
@@ -559,5 +559,11 @@ public class AbstractPage {
 	public String getErrorMessageAtMandantoryFieldByID(WebDriver driver, String fieldID) {
 		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
 		return getElementText(driver, AbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
+	}
+	
+	public void moveToMainMenuByName(WebDriver driver, String pageName) {
+		waitToElementVisible(driver, pageUIs.orangehrm.AbstractPageUI.DYNAMIC_MENU_BY_NAME, pageName);
+		clickToElement(driver, pageUIs.orangehrm.AbstractPageUI.DYNAMIC_MENU_BY_NAME, pageName);
+	
 	}
 }

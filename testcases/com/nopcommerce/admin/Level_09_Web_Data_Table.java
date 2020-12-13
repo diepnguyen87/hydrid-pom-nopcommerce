@@ -8,10 +8,10 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
-import pageObjects.AdminDashboardPO;
-import pageObjects.AdminLoginPO;
-import pageObjects.AdminProductPO;
-import pageObjects.PageGeneratorManager;
+import pageObjects.nopcommerce.AdminDashboardPO;
+import pageObjects.nopcommerce.AdminLoginPO;
+import pageObjects.nopcommerce.AdminProductPO;
+import pageObjects.nopcommerce.PageGeneratorManager;
 
 public class Level_09_Web_Data_Table extends AbstractTest {
 

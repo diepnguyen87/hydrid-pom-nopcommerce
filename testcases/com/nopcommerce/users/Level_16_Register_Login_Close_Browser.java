@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 import com.nopcommerce.common.Common_02_Cookie;
 import commons.AbstractTest;
 import io.qameta.allure.Feature;
-import pageObjects.PageGeneratorManager;
-import pageObjects.UserHomePO;
+import pageObjects.nopcommerce.PageGeneratorManager;
+import pageObjects.nopcommerce.UserHomePO;
 
 @Feature("User")
 public class Level_16_Register_Login_Close_Browser extends AbstractTest {
