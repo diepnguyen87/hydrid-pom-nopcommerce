@@ -6,7 +6,7 @@ import org.openqa.selenium.remote.server.handler.GetElementDisplayed;
 import com.google.common.cache.LoadingCache;
 
 import commons.AbstractPage;
-import pageUIs.nopcommerce.AbstractPageUI;
+import pageUIs.nopcommerce.NopcommerceAbstractPageUI;
 import pageUIs.nopcommerce.AdminProductPageUI;
 
 public class AdminProductPO extends AbstractPage{
@@ -88,7 +88,7 @@ public class AdminProductPO extends AbstractPage{
 	}
 
 	public void scrollToPanelID(String panelID) {
-		scrollToElement(driver, AbstractPageUI.PANEL_BY_ID, panelID);
+		scrollToElement(driver, NopcommerceAbstractPageUI.PANEL_BY_ID, panelID);
 	}
 
 	public void inputToAltTextbox(String value) {
@@ -114,7 +114,7 @@ public class AdminProductPO extends AbstractPage{
 	}
 
 	public boolean areProductInfoDisplayed(String pictureName, String orderNumber, String alt, String title) {
-		return isElementDisplay(driver, AbstractPageUI.PICTURE_PANEL_DETAIL, pictureName, orderNumber, alt, title); 
+		return isElementDisplay(driver, NopcommerceAbstractPageUI.PICTURE_PANEL_DETAIL, pictureName, orderNumber, alt, title); 
 	}
 
 	public void clickToSaveButton() {
@@ -132,10 +132,10 @@ public class AdminProductPO extends AbstractPage{
 	}
 
 	public void openPanelByID(String panelID) {
-		String classAttribute = getElementAttribute(driver, AbstractPageUI.EXPANDED_ICON_BY_PANEL_ID, "class", panelID);
+		String classAttribute = getElementAttribute(driver, NopcommerceAbstractPageUI.EXPANDED_ICON_BY_PANEL_ID, "class", panelID);
 		if(classAttribute.contains("fa-plus")) {
-			waitToElementClickable(driver, AbstractPageUI.PANEL_BY_ID, panelID);
-			clickToElement(driver, AbstractPageUI.PANEL_BY_ID, panelID);
+			waitToElementClickable(driver, NopcommerceAbstractPageUI.PANEL_BY_ID, panelID);
+			clickToElement(driver, NopcommerceAbstractPageUI.PANEL_BY_ID, panelID);
 			sleepInMiliSecond(2);
 		}
 	}

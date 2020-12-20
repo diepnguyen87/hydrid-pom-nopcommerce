@@ -1,6 +1,6 @@
 package pageUIs.nopcommerce;
 
-public class AbstractPageUI {
+public class NopcommerceAbstractPageUI {
 
 	public static final String ADDRESSES_LINK = "//div[@class= 'listbox']//a[text()='Addresses']";
 	public static final String ORDERS_HISTORY_LINK = "//div[@class= 'listbox']//a[text()='Orders']";

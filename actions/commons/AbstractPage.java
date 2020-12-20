@@ -19,7 +19,8 @@ import pageObjects.nopcommerce.UserCustomerAddressesPO;
 import pageObjects.nopcommerce.UserCustomerInfoPO;
 import pageObjects.nopcommerce.UserCustomerProductReviewsPO;
 import pageObjects.nopcommerce.UserOrdersHistoryPO;
-import pageUIs.nopcommerce.AbstractPageUI;
+import pageUIs.nopcommerce.NopcommerceAbstractPageUI;
+import pageUIs.orangehrm.OrangeHRMAbstractPageUI;
 
 public class AbstractPage {
 
@@ -430,7 +431,7 @@ public class AbstractPage {
 	
 	public void waitToLoadingIconInvisible(WebDriver driver) {
 		explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
-		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(AbstractPageUI.LOADING_ICON))));
+		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(NopcommerceAbstractPageUI.LOADING_ICON))));
 	}
 	
 	public void waitToAllElementsPresence(WebDriver driver, String locator) {
@@ -449,32 +450,32 @@ public class AbstractPage {
 	}
 	
 	public UserCustomerAddressesPO openAddressesPage(WebDriver driver) {
-		waitToElementClickable(driver, AbstractPageUI.ADDRESSES_LINK);
-		clickToElement(driver, AbstractPageUI.ADDRESSES_LINK);
+		waitToElementClickable(driver, NopcommerceAbstractPageUI.ADDRESSES_LINK);
+		clickToElement(driver, NopcommerceAbstractPageUI.ADDRESSES_LINK);
 		return PageGeneratorManager.getUserCustomerAddressesPage(driver);
 	}
 	
 	public UserCustomerProductReviewsPO openMyProductReviewsPage(WebDriver driver) {
-		waitToElementClickable(driver, AbstractPageUI.MY_PRODUCT_REVIEWS_LINK);
-		clickToElement(driver, AbstractPageUI.MY_PRODUCT_REVIEWS_LINK);
+		waitToElementClickable(driver, NopcommerceAbstractPageUI.MY_PRODUCT_REVIEWS_LINK);
+		clickToElement(driver, NopcommerceAbstractPageUI.MY_PRODUCT_REVIEWS_LINK);
 		return PageGeneratorManager.getUserCustomerProductReviewsPage(driver);
 	}
 
 	public UserCustomerInfoPO openCustomerInfoPage(WebDriver driver) {
-		waitToElementClickable(driver, AbstractPageUI.CUSTOMER_INFO_LINK);
-		clickToElement(driver, AbstractPageUI.CUSTOMER_INFO_LINK);
+		waitToElementClickable(driver, NopcommerceAbstractPageUI.CUSTOMER_INFO_LINK);
+		clickToElement(driver, NopcommerceAbstractPageUI.CUSTOMER_INFO_LINK);
 		return PageGeneratorManager.getUserCustomerInfoPage(driver);
 	}
 	
 	public UserOrdersHistoryPO openOrderPage(WebDriver driver) {
-		waitToElementClickable(driver, AbstractPageUI.ORDERS_HISTORY_LINK);
-		clickToElement(driver, AbstractPageUI.ORDERS_HISTORY_LINK);
+		waitToElementClickable(driver, NopcommerceAbstractPageUI.ORDERS_HISTORY_LINK);
+		clickToElement(driver, NopcommerceAbstractPageUI.ORDERS_HISTORY_LINK);
 		return PageGeneratorManager.getUserOrdersHistoryPage(driver);
 	}
 
 	public AbstractPage openPageByName1(WebDriver driver, String pageName) {
-		waitToElementClickable(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
-		clickToElement(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
+		waitToElementClickable(driver, getDynamicLocator(NopcommerceAbstractPageUI.DYNAMIC_LINK, pageName));
+		clickToElement(driver, getDynamicLocator(NopcommerceAbstractPageUI.DYNAMIC_LINK, pageName));
 		
 		switch (pageName) {
 		case "Addresses":
@@ -490,8 +491,8 @@ public class AbstractPage {
 	}
 	
 	public void openPageByName2(WebDriver driver, String pageName) {
-		waitToElementClickable(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
-		clickToElement(driver, getDynamicLocator(AbstractPageUI.DYNAMIC_LINK, pageName));
+		waitToElementClickable(driver, getDynamicLocator(NopcommerceAbstractPageUI.DYNAMIC_LINK, pageName));
+		clickToElement(driver, getDynamicLocator(NopcommerceAbstractPageUI.DYNAMIC_LINK, pageName));
 	}
 	
 	public void uploadFileByPanelID(WebDriver driver, String panelID, String... fileNames) {
@@ -500,7 +501,7 @@ public class AbstractPage {
 			fullFileName = fullFileName + GlobalConstants.UPLOAD_FOLDER + file + "\n";
 		}
 	    fullFileName = fullFileName.trim();
-	    getElement(driver, AbstractPageUI.UPLOAD_FILE_BY_PANEL_ID, panelID).sendKeys(fullFileName);
+	    getElement(driver, NopcommerceAbstractPageUI.UPLOAD_FILE_BY_PANEL_ID, panelID).sendKeys(fullFileName);
 	}
 	
 	public void uploadMultipleFile(WebDriver driver, String... fileNames) {
@@ -509,12 +510,12 @@ public class AbstractPage {
 			fullFileName = fullFileName + GlobalConstants.UPLOAD_FOLDER + file + "\n";
 		}
 	    fullFileName = fullFileName.trim();
-	    getElement(driver, AbstractPageUI.UPLOAD_FILE).sendKeys(fullFileName);
+	    getElement(driver, NopcommerceAbstractPageUI.UPLOAD_FILE).sendKeys(fullFileName);
 	}
 	
 	public int getValueByColumnAndRow(WebDriver driver, String panelID, String columnName, String rowNumber) {
-		int columnNumber = getElements(driver, AbstractPageUI.COLUMN_NAME_BY_PANEL_ID, panelID, columnName).size() + 1;
-		String actualValue = getElementText(driver, AbstractPageUI.CELL_BY_PANEL_ID, panelID, rowNumber, String.valueOf(columnNumber));
+		int columnNumber = getElements(driver, NopcommerceAbstractPageUI.COLUMN_NAME_BY_PANEL_ID, panelID, columnName).size() + 1;
+		String actualValue = getElementText(driver, NopcommerceAbstractPageUI.CELL_BY_PANEL_ID, panelID, rowNumber, String.valueOf(columnNumber));
 		return Integer.parseInt(actualValue);
 	}
 
@@ -537,33 +538,39 @@ public class AbstractPage {
 	}
 	
 	public void clickToRadioButtonByID(WebDriver driver, String radioButtonID) {
-		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
+		waitToElementClickable(driver, NopcommerceAbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
+		clickToElement(driver, NopcommerceAbstractPageUI.DYNAMIC_RADIO_BUTTON_BY_ID, radioButtonID);
 	}
 	
 	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
-		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, textboxID);
-		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, value, textboxID);
+		waitToElementVisible(driver, NopcommerceAbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, textboxID);
+		sendkeyToElement(driver, NopcommerceAbstractPageUI.DYNAMIC_TEXT_BOX_BY_ID, value, textboxID);
 	}
 	
 	public void clickToButtonByValue(WebDriver driver, String buttonValue) {
-		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
+		waitToElementClickable(driver, NopcommerceAbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
+		clickToElement(driver, NopcommerceAbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, buttonValue);
 	}
 	
 	public void selectDropdownByName(WebDriver driver, String dropdownName, String itemValue) {
-		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownName);
-		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownName);
+		waitToElementVisible(driver, NopcommerceAbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownName);
+		selectItemInDropdown(driver, NopcommerceAbstractPageUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownName);
 	}
 	
 	public String getErrorMessageAtMandantoryFieldByID(WebDriver driver, String fieldID) {
-		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
-		return getElementText(driver, AbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
+		waitToElementVisible(driver, NopcommerceAbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
+		return getElementText(driver, NopcommerceAbstractPageUI.DYNAMIC_ERROR_MSG_BY_ID, fieldID);
 	}
 	
+	/* Orange HRM project */
 	public void moveToMainMenuByName(WebDriver driver, String pageName) {
-		waitToElementVisible(driver, pageUIs.orangehrm.AbstractPageUI.DYNAMIC_MENU_BY_NAME, pageName);
-		clickToElement(driver, pageUIs.orangehrm.AbstractPageUI.DYNAMIC_MENU_BY_NAME, pageName);
-	
+		waitToElementVisible(driver, pageUIs.orangehrm.OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, pageName);
+		clickToElement(driver, pageUIs.orangehrm.OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, pageName);
 	}
+	
+	public void clickToButtonBynameAtFormHeader (WebDriver driver, String headerName, String buttonName) {
+		waitToElementClickable(driver, OrangeHRMAbstractPageUI.DYNAMIC_BUTTON_BY_NAME_AT_FORM_HEADER, headerName, buttonName);
+		clickToElement(driver, OrangeHRMAbstractPageUI.DYNAMIC_BUTTON_BY_NAME_AT_FORM_HEADER, headerName, buttonName);
+	}
+	
 }

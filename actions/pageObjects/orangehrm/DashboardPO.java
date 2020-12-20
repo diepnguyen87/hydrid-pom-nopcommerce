@@ -3,7 +3,7 @@ package pageObjects.orangehrm;
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
-import pageUIs.orangehrm.AbstractPageUI;
+import pageUIs.orangehrm.OrangeHRMAbstractPageUI;
 import pageUIs.orangehrm.EmployeeDetailsPageUI;
 
 public class DashboardPO extends AbstractPage{
@@ -15,14 +15,14 @@ public class DashboardPO extends AbstractPage{
 	}
 
 	public EmployeeDetailsPO clickToSubmenu(String subMenuName) {
-		waitToElementClickable(driver, AbstractPageUI.DYNAMIC_SUB_MENU_BY_NAME, subMenuName);
-		clickToElement(driver, AbstractPageUI.DYNAMIC_SUB_MENU_BY_NAME, subMenuName);
+		waitToElementClickable(driver, OrangeHRMAbstractPageUI.DYNAMIC_SUB_MENU_BY_NAME, subMenuName);
+		clickToElement(driver, OrangeHRMAbstractPageUI.DYNAMIC_SUB_MENU_BY_NAME, subMenuName);
 		return PageGeneratorManager.getEmployeeDetailsPage(driver);
 	}
 
 	public void hoverToMenu(String mainMenuName) {
-		waitToElementVisible(driver, AbstractPageUI.DYNAMIC_MENU_BY_NAME, mainMenuName);
-		hoverMouseToElement(driver, AbstractPageUI.DYNAMIC_MENU_BY_NAME, mainMenuName);
+		waitToElementVisible(driver, OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, mainMenuName);
+		hoverMouseToElement(driver, OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, mainMenuName);
 	}
 	
 

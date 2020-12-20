@@ -3,7 +3,7 @@ package pageObjects.nopcommerce;
 import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
-import pageUIs.nopcommerce.AbstractPageUI;
+import pageUIs.nopcommerce.NopcommerceAbstractPageUI;
 import pageUIs.nopcommerce.AdminDashboardPageUI;
 
 public class AdminDashboardPO extends AbstractPage{

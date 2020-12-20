@@ -1,0 +1,45 @@
+2020-12-20 21:32:10,821 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Pre-condition - Step 01: enter to username textbox
+2020-12-20 21:32:11,760 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Pre-condition - Step 02: enter to password textbox
+2020-12-20 21:32:12,507 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Pre-condition - Step 03: click to login button
+2020-12-20 21:32:17,237 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee_01 - Step 01: hover to menu PIM
+2020-12-20 21:32:17,541 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee_01 - Step 02: click to submenuAdd employee
+2020-12-20 21:32:18,669 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee_01 - Step 03: enter to first name textbox
+2020-12-20 21:32:19,524 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee_01 - Step 04: enter to last name textbox
+2020-12-20 21:32:20,377 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee_01 - Step 05: get employee id from employee form
+2020-12-20 21:32:20,492 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee_01 - Step 06: click to save button
+2020-12-20 21:32:22,854 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:22,962 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:23,058 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:23,161 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:23,328 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 01: click to 'Edit' button at personal detail form
+2020-12-20 21:32:23,536 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 02: enter Manual3716 to first name textbox
+2020-12-20 21:32:24,325 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 03: enter FC317481 to last name textbox
+2020-12-20 21:32:25,070 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 04: enter 329-68-2055 to social security number textbox
+2020-12-20 21:32:25,796 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 05: click to Gender radio with Male
+2020-12-20 21:32:25,962 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 06: select to 'Marial Status' dropdown with Single
+2020-12-20 21:32:26,147 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 07: select 'Nationality' dropdown with Vietnamese
+2020-12-20 21:32:26,334 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 08: enter 2000-08-01 to 'Date of Birth' textbox
+2020-12-20 21:32:27,178 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 09: click to 'Save' button at personal detail form
+2020-12-20 21:32:28,869 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 10: verify success message display with value 'Successfully saved'
+2020-12-20 21:32:28,955 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:28,956 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 11: verify first name textbox edited successfully
+2020-12-20 21:32:29,014 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:29,014 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 12: verify last name textbox edited successfully
+2020-12-20 21:32:29,084 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:29,085 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 13: verify SSN number edited successfully
+2020-12-20 21:32:29,175 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:29,175 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 14: verify gender radio edited successfully
+2020-12-20 21:32:29,251 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:29,251 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 15: verify Marial Status edited successfully
+2020-12-20 21:32:29,404 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:29,404 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Personal Detail] - Step 16: verify Nationality edited successfully
+2020-12-20 21:32:31,870 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User -  -------------------------- PASSED -------------------------- 
+2020-12-20 21:32:31,941 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 01: open 'Salary' tab
+2020-12-20 21:32:33,089 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 02: click to 'Add' button at Salary form
+2020-12-20 21:32:33,237 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 03: select to 'Pay Grade' dropdown with Grade 1
+2020-12-20 21:32:33,430 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 04: select to 'Salary Component' dropdown with Manual3716 - 
+2020-12-20 21:32:34,231 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 05: select to 'Pay Frequency' dropdown with Monthly on first pay of month.
+2020-12-20 21:32:34,432 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 06: select to 'Currency' dropdown with United States Dollar
+2020-12-20 21:32:34,662 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 07: Enter 55000 to 'Amount' textbox
+2020-12-20 21:32:35,454 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 08: Enter Salary per month to 'Comments' text area
+2020-12-20 21:32:36,215 INFO  com.orangehrm.employee.Employee_01_Add_Edit_Employee_User - Employee employee [Salary] - Step 02: click to 'Save' button at Add Salary Component
