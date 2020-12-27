@@ -19,6 +19,7 @@ import pageObjects.nopcommerce.UserCustomerAddressesPO;
 import pageObjects.nopcommerce.UserCustomerInfoPO;
 import pageObjects.nopcommerce.UserCustomerProductReviewsPO;
 import pageObjects.nopcommerce.UserOrdersHistoryPO;
+import pageUIs.nopcommerce.AdminProductPageUI;
 import pageUIs.nopcommerce.NopcommerceAbstractPageUI;
 import pageUIs.orangehrm.OrangeHRMAbstractPageUI;
 
@@ -571,6 +572,12 @@ public class AbstractPage {
 	public void clickToButtonBynameAtFormHeader (WebDriver driver, String headerName, String buttonName) {
 		waitToElementClickable(driver, OrangeHRMAbstractPageUI.DYNAMIC_BUTTON_BY_NAME_AT_FORM_HEADER, headerName, buttonName);
 		clickToElement(driver, OrangeHRMAbstractPageUI.DYNAMIC_BUTTON_BY_NAME_AT_FORM_HEADER, headerName, buttonName);
+	}
+	
+	public boolean isInformationDisplayedAtColumnNameAndRowNumber(WebDriver driver, String tableID, String colunmName, String rowNumber, String expectedValue) {
+		int columnNumber = getElements(driver, OrangeHRMAbstractPageUI.DYNAMIC_COLUMN_NAME_SIBLING, tableID, colunmName).size() + 1;
+		String actualValue = getElementText(driver, OrangeHRMAbstractPageUI.DYNAMIC_CELL_DETAIL, rowNumber, String.valueOf(columnNumber));
+		return actualValue.equals(expectedValue);
 	}
 	
 }

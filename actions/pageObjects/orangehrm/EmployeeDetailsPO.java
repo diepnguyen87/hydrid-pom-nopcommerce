@@ -1,6 +1,7 @@
 package pageObjects.orangehrm;
 
 import org.openqa.selenium.WebDriver;
+
 import commons.AbstractPage;
 import pageUIs.orangehrm.EmployeeDetailsPageUI;
 
@@ -68,22 +69,22 @@ public class EmployeeDetailsPO extends AbstractPage {
 	}
 
 	public void clickToGenderRadioAtPersonalDetailForm(String genderValue) {
-		waitToElementClickable(driver, EmployeeDetailsPageUI.GENDER_RADIO_AT_PERSONAL_DETAIL, genderValue);
+		waitToElementClickable(driver, EmployeeDetailsPageUI.GENDER_RADIO_AT_PERSONAL_DETAIL);
 		clickToElement(driver, EmployeeDetailsPageUI.GENDER_RADIO_AT_PERSONAL_DETAIL, genderValue);
 	}
 
 	public void selectMarialStatusDropdownAtPersonalDetailForm(String marialStatusValue) {
-		waitToElementClickable(driver, EmployeeDetailsPageUI.MARIAL_STATUS_AT_PERSONAL_DETAIL, marialStatusValue);
+		waitToElementClickable(driver, EmployeeDetailsPageUI.MARIAL_STATUS_AT_PERSONAL_DETAIL);
 		selectItemInDropdown(driver, EmployeeDetailsPageUI.MARIAL_STATUS_AT_PERSONAL_DETAIL, marialStatusValue);
 	}
 
 	public void selectNationalityDropdownAtPersonalDetailForm(String nationalityValue) {
-		waitToElementClickable(driver, EmployeeDetailsPageUI.NATIONALITY_AT_PERSONAL_DETAIL, nationalityValue);
+		waitToElementClickable(driver, EmployeeDetailsPageUI.NATIONALITY_AT_PERSONAL_DETAIL);
 		selectItemInDropdown(driver, EmployeeDetailsPageUI.NATIONALITY_AT_PERSONAL_DETAIL, nationalityValue);
 	}
 
 	public void selectDayOfBirthDropdownAtPersonalDetailForm(String DOBValue) {
-		waitToElementClickable(driver, EmployeeDetailsPageUI.DOB_DROPDOWN_AT_PERSONAL_DETAIL, DOBValue);
+		waitToElementClickable(driver, EmployeeDetailsPageUI.DOB_DROPDOWN_AT_PERSONAL_DETAIL);
 		selectItemInDropdown(driver, EmployeeDetailsPageUI.DOB_DROPDOWN_AT_PERSONAL_DETAIL, DOBValue);
 	}
 
@@ -123,7 +124,7 @@ public class EmployeeDetailsPO extends AbstractPage {
 	}
 
 	public void selectPayGradeDropdownAtSalaryForm(String payGradeValue) {
-		waitToElementClickable(driver, EmployeeDetailsPageUI.PAY_GRADE_AT_SALARY, payGradeValue);
+		waitToElementClickable(driver, EmployeeDetailsPageUI.PAY_GRADE_AT_SALARY);
 		selectItemInDropdown(driver, EmployeeDetailsPageUI.PAY_GRADE_AT_SALARY, payGradeValue);
 	}
 
@@ -133,12 +134,12 @@ public class EmployeeDetailsPO extends AbstractPage {
 	}
 
 	public void selectPayFrequencyDropdownAtSalaryForm(String payFrequencyValue) {
-		waitToElementClickable(driver, EmployeeDetailsPageUI.PAY_FREQUENCY_AT_SALARY, payFrequencyValue);
+		waitToElementClickable(driver, EmployeeDetailsPageUI.PAY_FREQUENCY_AT_SALARY);
 		selectItemInDropdown(driver, EmployeeDetailsPageUI.PAY_FREQUENCY_AT_SALARY, payFrequencyValue);
 	}
 
 	public void selectCurrencyDropdownAtSalaryForm(String currentValue) {
-		waitToElementClickable(driver, EmployeeDetailsPageUI.CURRENCY_AT_SALARY, currentValue);
+		waitToElementClickable(driver, EmployeeDetailsPageUI.CURRENCY_AT_SALARY);
 		selectItemInDropdown(driver, EmployeeDetailsPageUI.CURRENCY_AT_SALARY, currentValue);
 	}
 
@@ -152,4 +153,95 @@ public class EmployeeDetailsPO extends AbstractPage {
 		sendkeyToElement(driver, EmployeeDetailsPageUI.COMMENT_TEXTAREA_AT_SALARY, comment);
 	}
 
+	public void selectJobTitleDropDownAtJobForm(String jobTitle) {
+		waitToElementClickable(driver, EmployeeDetailsPageUI.JOB_TITLE_DROPDWON_AT_JOB_FORM);
+		selectItemInDropdown(driver, EmployeeDetailsPageUI.JOB_TITLE_DROPDWON_AT_JOB_FORM, jobTitle);
+	}
+
+	public void selectEmployeeStatusDropDownAtJobForm(String employeeStatus) {
+		waitToElementClickable(driver, EmployeeDetailsPageUI.EMPLOYEE_STATUS_DROPDOWN_AT_JOB_FORM);
+		selectItemInDropdown(driver, EmployeeDetailsPageUI.EMPLOYEE_STATUS_DROPDOWN_AT_JOB_FORM, employeeStatus);
+	}
+
+	public void selectJobCategoryDropDownAtJobForm(String jobCategory) {
+		waitToElementClickable(driver, EmployeeDetailsPageUI.JOB_CATEGORY_DROPDOWN_AT_JOB_FORM);
+		selectItemInDropdown(driver, EmployeeDetailsPageUI.JOB_CATEGORY_DROPDOWN_AT_JOB_FORM, jobCategory);
+	}
+
+	public void selectJoinedDateDropDownAtJobForm(String joinedDate) {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.JOINED_DATE_DROPDOWN_AT_JOB_FORM);
+		sendkeyToElement(driver, EmployeeDetailsPageUI.JOINED_DATE_DROPDOWN_AT_JOB_FORM, joinedDate);
+	}
+
+	public void selectSubUnitDropDownAtJobForm(String subUnit) {
+		waitToElementClickable(driver, EmployeeDetailsPageUI.SUB_UNIT_DROPDOWN_AT_JOB_FORM);
+		//selectItemInDropdown(driver, EmployeeDetailsPageUI.SUB_UNIT_DROPDOWN_AT_JOB_FORM, subUnit);
+		selectItemInCustomDropdown(driver, EmployeeDetailsPageUI.SUB_UNIT_DROPDOWN_AT_JOB_FORM, EmployeeDetailsPageUI.SUB_UNIT_CHILD_DROPDOWN_AT_JOB_FORM, subUnit);
+	}
+
+	public void selectLocationDropDownAtJobForm(String location) {
+		waitToElementClickable(driver, EmployeeDetailsPageUI.LOCATION_DROPDOWN_AT_JOB_FORM);
+		selectItemInDropdown(driver, EmployeeDetailsPageUI.LOCATION_DROPDOWN_AT_JOB_FORM, location);
+	}
+
+	public void enterToStartDateTextboxAtJobForm(String startDate) {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.START_DATE_TEXTBOX_AT_JOB_FORM);
+		sendkeyToElement(driver, EmployeeDetailsPageUI.START_DATE_TEXTBOX_AT_JOB_FORM, startDate);
+	}
+
+	public void enterToEndateDateTextboxAtJobForm(String endDate) {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.END_DATE_TEXTBOX_AT_JOB_FORM);
+		sendkeyToElement(driver, EmployeeDetailsPageUI.END_DATE_TEXTBOX_AT_JOB_FORM, endDate);
+	}
+
+	public String getSelectedItemOfJobTitleDropDownAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.JOB_TITLE_DROPDWON_AT_JOB_FORM);
+		return getFirstSelectedTextInDropdown(driver, EmployeeDetailsPageUI.JOB_TITLE_DROPDWON_AT_JOB_FORM);
+	}
+
+	public String getSelectedItemOfEmployeeStatusDropDownAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.EMPLOYEE_STATUS_DROPDOWN_AT_JOB_FORM);
+		return getFirstSelectedTextInDropdown(driver, EmployeeDetailsPageUI.EMPLOYEE_STATUS_DROPDOWN_AT_JOB_FORM);
+	}
+
+	public String getSelectedItemOfJobCategoryDropDownAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.JOB_CATEGORY_DROPDOWN_AT_JOB_FORM);
+		return getFirstSelectedTextInDropdown(driver, EmployeeDetailsPageUI.JOB_CATEGORY_DROPDOWN_AT_JOB_FORM);
+	}
+
+	public String getSelectedItemOfSubUnitDropDownAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.SUB_UNIT_DROPDOWN_AT_JOB_FORM);
+		return getFirstSelectedTextInDropdown(driver, EmployeeDetailsPageUI.SUB_UNIT_DROPDOWN_AT_JOB_FORM);
+	}
+
+	public String getJoinedDateValueAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.JOINED_DATE_DROPDOWN_AT_JOB_FORM);
+		return getElementAttribute(driver, EmployeeDetailsPageUI.JOINED_DATE_DROPDOWN_AT_JOB_FORM, "value");
+	}
+
+	public String getSelectedItemOfLocationDropDownAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.LOCATION_DROPDOWN_AT_JOB_FORM);
+		return getFirstSelectedTextInDropdown(driver, EmployeeDetailsPageUI.LOCATION_DROPDOWN_AT_JOB_FORM);
+	}
+
+	public Object getStartDateValueAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.START_DATE_TEXTBOX_AT_JOB_FORM);
+		return getElementAttribute(driver, EmployeeDetailsPageUI.START_DATE_TEXTBOX_AT_JOB_FORM, "value");
+	}
+
+	public Object getEndDateValueAtJobForm() {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.END_DATE_TEXTBOX_AT_JOB_FORM);
+		return getElementAttribute(driver, EmployeeDetailsPageUI.END_DATE_TEXTBOX_AT_JOB_FORM, "value");
+	}
+
+	public void enterToNameTextAreaAtReportForm(String name) {
+		waitToElementVisible(driver, EmployeeDetailsPageUI.NAME_TEXTBOX_AT_REPORT_TO);
+		sendkeyToElement(driver, EmployeeDetailsPageUI.NAME_TEXTBOX_AT_REPORT_TO, name);
+	}
+
+	public void selectReportingMethodDropdownAtSalaryForm(String reportingMethod) {
+		waitToElementClickable(driver, EmployeeDetailsPageUI.REPORTING_METHOD_DROPDOWN_AT_REPORT_TO);
+		selectItemInDropdown(driver, EmployeeDetailsPageUI.REPORTING_METHOD_DROPDOWN_AT_REPORT_TO, reportingMethod);
+	}
+	
 }

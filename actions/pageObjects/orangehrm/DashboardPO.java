@@ -24,6 +24,11 @@ public class DashboardPO extends AbstractPage{
 		waitToElementVisible(driver, OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, mainMenuName);
 		hoverMouseToElement(driver, OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, mainMenuName);
 	}
+
+	public void clickToMenu(String menuName) {
+		waitToElementClickable(driver, OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, menuName);
+		clickToElement(driver, OrangeHRMAbstractPageUI.DYNAMIC_MENU_BY_NAME, menuName);
+	}
 	
 
 }

@@ -29,4 +29,20 @@ public class EmployeeDetailsPageUI {
 	public static final String AMOUNT_TEXTBOX_AT_SALARY = "//input[@id='salary_basic_salary']";
 	public static final String COMMENT_TEXTAREA_AT_SALARY = "//textarea[@id='salary_comments']";
 	
+	/* Job */
+	public static final String JOB_TITLE_DROPDWON_AT_JOB_FORM = "//select[@id='job_job_title']";
+	public static final String EMPLOYEE_STATUS_DROPDOWN_AT_JOB_FORM = "//select[@id='job_emp_status']";
+	public static final String JOB_CATEGORY_DROPDOWN_AT_JOB_FORM = "//select[@id='job_eeo_category']";
+	public static final String JOINED_DATE_DROPDOWN_AT_JOB_FORM = "//input[@id='job_joined_date']";
+	public static final String SUB_UNIT_DROPDOWN_AT_JOB_FORM = "//select[@id='job_sub_unit']";
+	public static final String SUB_UNIT_CHILD_DROPDOWN_AT_JOB_FORM = "//select[@id='job_sub_unit']/option";
+	public static final String LOCATION_DROPDOWN_AT_JOB_FORM = "//select[@id='job_location']";
+	
+	public static final String START_DATE_TEXTBOX_AT_JOB_FORM = "//input[@id='job_contract_start_date']";
+	public static final String END_DATE_TEXTBOX_AT_JOB_FORM = "//input[@id='job_contract_end_date']";
+	
+	/* Report To */
+	public static final String NAME_TEXTBOX_AT_REPORT_TO = "//input[@id='reportto_supervisorName_empName']";
+	public static final String REPORTING_METHOD_DROPDOWN_AT_REPORT_TO = "//select[@id='reportto_reportingMethodType']";
+	
 }
